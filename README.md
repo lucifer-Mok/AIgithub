@@ -1,0 +1,258 @@
+# AI GitHub Radar 🔭
+
+> 每日自动追踪 GitHub 上最热门的 AI 项目，智能分类、中文摘要、趋势分析，一站式掌握 AI 开源动态。
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
+![Vue3](https://img.shields.io/badge/Vue-3.x-brightgreen)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+
+---
+
+## ✨ 功能特性
+
+### 数据采集
+- **双轨爬取**：GitHub Trending 页面（今日热度）+ Search API（按 topic/关键词）
+- **30+ AI 分类关键词**：覆盖 LLM、RAG、Agent、MCP、图像视觉、语音音频等
+- **自定义追踪**：输入任意 GitHub URL 或 `owner/repo`，立即收录并自动提取关键词
+- **每日定时**：凌晨 2 点自动执行，无需人工干预
+
+### 智能分类
+14 个 AI 细分分类，自动打标：
+
+| 分类 | 说明 |
+|------|------|
+| 🧠 大语言模型 | LLM、GPT、Claude、Llama 等 |
+| 🔍 RAG检索增强 | 向量数据库、知识库、语义搜索 |
+| 🤖 AI Agent | 自主代理、多 Agent 框架 |
+| 🔌 MCP协议 | Model Context Protocol 工具 |
+| 🎨 图像视觉 | 图像生成、目标检测、多模态 |
+| 🎵 语音音频 | ASR、TTS、音频生成 |
+| ⚙️ 模型训练 | 微调、RLHF、LoRA |
+| ⚡ 模型推理 | 量化、加速、部署 |
+| 💻 代码生成 | AI 编程助手、代码补全 |
+| 🦾 具身智能 | 机器人、强化学习 |
+| 🛡️ AI安全 | 对齐、红队测试 |
+| 🛠️ AI工具链 | 框架、SDK、平台 |
+| 📊 数据集 | 训练数据、评测基准 |
+| ✨ 其他AI | 其他 AI 相关项目 |
+
+### 中文化
+- **优先检测中文 README**：自动识别 `README.zh-CN.md` 等文件，直接提炼摘要
+- **DeepSeek 高质量翻译**：有 API Key 时生成中文名称、摘要、标签
+- **Google 免费翻译降级**：无 Key 时自动降级，保证基本可用
+- **智能跳过**：已是中文、内容未变化的项目不重复消耗 token
+
+### 前端展示
+- **三种排序**：今日热度（Trending）/ 总星数 / AI 相关度
+- **分类筛选**：左侧导航，数量实时联动
+- **中英切换**：一键切换中文摘要 / 英文原文
+- **全量搜索**：后端搜索，覆盖名称、描述、中文摘要
+- **详情抽屉**：点击卡片查看完整信息和近期趋势图
+- **无限滚动**：自动加载更多
+
+### 系统管理
+- **设置页面**：在线更新 GitHub Token、DeepSeek Key，热加载无需重启
+- **Token 验证**：自动检测 Token 有效性，失效时显示红色警告
+- **追踪管理**：添加/删除/启用/禁用自定义追踪规则
+- **爬取日志**：记录每次爬取的状态和统计
+
+---
+
+## 🏗️ 技术架构
+
+```
+AIgithub/
+├── backend/                 # Python FastAPI 后端
+│   ├── api/
+│   │   ├── routes.py        # 主要 API 接口
+│   │   └── config_routes.py # 系统配置接口（热加载）
+│   ├── crawler/
+│   │   ├── github_client.py # GitHub API + Trending 爬虫
+│   │   ├── classifier.py    # AI 项目分类器
+│   │   ├── translator.py    # 翻译模块（DeepSeek / Google）
+│   │   ├── storage.py       # 数据库存储层
+│   │   ├── track_service.py # 自定义追踪服务
+│   │   └── runner.py        # 爬取主流程（4个阶段）
+│   ├── config.py            # 配置管理
+│   ├── models.py            # SQLAlchemy 数据模型
+│   ├── scheduler.py         # APScheduler 定时任务
+│   └── main.py              # FastAPI 应用入口
+└── frontend/                # Vue 3 前端
+    └── src/
+        ├── api/             # API 封装
+        ├── stores/          # Pinia 状态管理
+        ├── components/      # 公共组件
+        │   ├── AppSidebar.vue
+        │   ├── RepoCard.vue
+        │   └── RepoDrawer.vue
+        └── views/           # 页面
+            ├── HomeView.vue     # 主页
+            ├── TracksView.vue   # 追踪管理
+            └── SettingsView.vue # 系统设置
+```
+
+---
+
+## 🚀 快速开始
+
+### 环境要求
+- Python 3.12+
+- Node.js 18+
+- MySQL 8.0+
+
+### 1. 克隆项目
+
+```bash
+git clone git@github.com:lucifer-Mok/AIgithub.git
+cd AIgithub
+```
+
+### 2. 后端配置
+
+```bash
+cd backend
+
+# 创建虚拟环境
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux/Mac
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 复制配置文件
+copy .env.example .env  # 或手动创建 .env
+```
+
+编辑 `.env`：
+
+```env
+# 数据库
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=ai_github
+
+# GitHub Token（可选，无 Token 限 60次/小时）
+# 获取：https://github.com/settings/tokens → Generate new token (classic)
+GITHUB_TOKEN=ghp_xxxx
+
+# DeepSeek API Key（可选，无 Key 自动降级为 Google 免费翻译）
+# 获取：https://platform.deepseek.com/api_keys
+DEEPSEEK_API_KEY=sk-xxxx
+```
+
+### 3. 初始化数据库
+
+```sql
+CREATE DATABASE ai_github DEFAULT CHARACTER SET utf8mb4;
+```
+
+然后启动后端，表结构会自动创建（通过 SQLAlchemy）。
+
+### 4. 启动后端
+
+```bash
+python main.py
+```
+
+访问 `http://localhost:8000/docs` 查看 API 文档。
+
+### 5. 前端配置
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+访问 `http://localhost:5173`
+
+### 6. 触发首次爬取
+
+在前端点击"立即抓取"按钮，或调用：
+
+```bash
+curl -X POST http://localhost:8000/api/crawl/trigger
+```
+
+---
+
+## 📡 API 接口
+
+| 接口 | 说明 |
+|------|------|
+| `GET /api/repos` | 获取 repo 列表（支持分类、排序、分页） |
+| `GET /api/repos/search` | 全量搜索 |
+| `GET /api/repos/{full_name}` | 获取 repo 详情及趋势 |
+| `GET /api/stats/overview` | 首页概览统计 |
+| `GET /api/categories` | 获取所有分类 |
+| `POST /api/crawl/trigger` | 手动触发爬取 |
+| `GET /api/tracks` | 获取自定义追踪列表 |
+| `POST /api/tracks/repo` | 添加 repo 追踪 |
+| `POST /api/tracks/keyword` | 添加关键词追踪 |
+| `GET /api/config` | 获取系统配置 |
+| `POST /api/config` | 更新配置（热加载） |
+| `GET /api/config/verify/github` | 验证 GitHub Token |
+
+---
+
+## ⚙️ 爬取流程
+
+每次爬取分 4 个阶段：
+
+```
+阶段 1：GitHub Trending（daily + weekly）
+    ↓ 获取今日/本周热门项目，记录 stars_today
+
+阶段 2a：Search API（30+ AI topics）
+    ↓ 按 topic 标签搜索，覆盖各 AI 细分领域
+
+阶段 2b：关键词全文搜索
+    ↓ 搜索名称/描述，捕获没打 topic 标签的优质项目
+
+阶段 2c：自定义追踪
+    ↓ 执行用户添加的 repo/keyword/topic 追踪规则
+
+阶段 3：中文 README 检测
+    ↓ 检测是否有 README.zh-CN.md 等文件
+
+阶段 4：翻译
+    ↓ DeepSeek（有 Key）或 Google 免费翻译（无 Key）
+    ↓ 智能跳过：已是中文 / 内容未变化 / 有中文 README
+```
+
+---
+
+## 🔧 自定义追踪
+
+在追踪管理页面，支持三种追踪方式：
+
+**追踪指定 Repo**
+```
+输入：https://github.com/obra/superpowers
+或：nexu-io/open-design
+```
+立即收录，自动提取关键词加入追踪规则。
+
+**追踪关键词**
+```
+关键词：agentic skills framework
+最低 Star：100
+```
+每次爬取时搜索包含该关键词的项目。
+
+**追踪 Topic**
+```
+Topic：mcp-server
+最低 Star：100
+```
+每次爬取时搜索带有该 topic 标签的项目。
+
+---
+
+## 📝 License
+
+MIT
