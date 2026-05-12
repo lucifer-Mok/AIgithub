@@ -129,7 +129,48 @@
           </div>
         </div>
 
-        <!-- 提示 -->
+        <!-- 最低 Star 数 -->
+        <div class="setting-card">
+          <div class="setting-header">
+            <div class="setting-title">
+              <span class="setting-icon">⭐</span>
+              Topic 搜索最低 Star 数
+            </div>
+            <div class="setting-desc">按 topic 标签搜索时过滤低质量项目，默认 500</div>
+          </div>
+          <div class="setting-input-row">
+            <input v-model="inputs.MIN_STARS_TOPIC" class="setting-input" type="number" min="0" placeholder="500" />
+            <button class="save-btn" :class="{ loading: saving.MIN_STARS_TOPIC }"
+              @click="save('MIN_STARS_TOPIC')">
+              {{ saving.MIN_STARS_TOPIC ? '保存中...' : '保存' }}
+            </button>
+          </div>
+          <div v-if="messages.MIN_STARS_TOPIC" class="setting-msg"
+            :class="messages.MIN_STARS_TOPIC.ok ? 'msg-ok' : 'msg-err'">
+            {{ messages.MIN_STARS_TOPIC.text }}
+          </div>
+        </div>
+
+        <div class="setting-card">
+          <div class="setting-header">
+            <div class="setting-title">
+              <span class="setting-icon">🔍</span>
+              关键词搜索最低 Star 数
+            </div>
+            <div class="setting-desc">按关键词全文搜索时过滤低质量项目，默认 200</div>
+          </div>
+          <div class="setting-input-row">
+            <input v-model="inputs.MIN_STARS_KEYWORD" class="setting-input" type="number" min="0" placeholder="200" />
+            <button class="save-btn" :class="{ loading: saving.MIN_STARS_KEYWORD }"
+              @click="save('MIN_STARS_KEYWORD')">
+              {{ saving.MIN_STARS_KEYWORD ? '保存中...' : '保存' }}
+            </button>
+          </div>
+          <div v-if="messages.MIN_STARS_KEYWORD" class="setting-msg"
+            :class="messages.MIN_STARS_KEYWORD.ok ? 'msg-ok' : 'msg-err'">
+            {{ messages.MIN_STARS_KEYWORD.text }}
+          </div>
+        </div>
         <div class="info-card">
           <div class="info-icon">💡</div>
           <div class="info-text">
@@ -156,9 +197,17 @@ const inputs = reactive<Record<string, string>>({
   GITHUB_TOKEN: '',
   DEEPSEEK_API_KEY: '',
   DEEPSEEK_MODEL: '',
+  MIN_STARS_TOPIC: '',
+  MIN_STARS_KEYWORD: '',
 })
 const saving = reactive<Record<string, boolean>>({})
-const messages = reactive<Record<string, { ok: boolean; text: string } | null>>({})
+const messages = reactive<Record<string, { ok: boolean; text: string } | null>>({
+  GITHUB_TOKEN: null,
+  DEEPSEEK_API_KEY: null,
+  DEEPSEEK_MODEL: null,
+  MIN_STARS_TOPIC: null,
+  MIN_STARS_KEYWORD: null,
+})
 const showSecrets = reactive<Record<string, boolean>>({
   GITHUB_TOKEN: false,
   DEEPSEEK_API_KEY: false,
@@ -172,7 +221,7 @@ async function loadConfig() {
     configs.value = res.data
     for (const [key, cfg] of Object.entries(res.data as any)) {
       if (!(cfg as any).is_secret && (cfg as any).value) {
-        inputs[key] = (cfg as any).value
+        inputs[key] = String((cfg as any).value)
       }
     }
     // 加载后自动验证 GitHub Token
@@ -200,11 +249,12 @@ async function verifyToken() {
 }
 
 async function save(key: string) {
-  if (!inputs[key]?.trim()) return
+  const val = inputs[key]
+  if (val === undefined || val === null || String(val).trim() === '') return
   saving[key] = true
   messages[key] = null
   try {
-    await api.updateConfig(key, inputs[key].trim())
+    await api.updateConfig(key, String(val).trim())
     configs.value[key] = { ...configs.value[key], is_set: true, value: configs.value[key]?.value ?? '', is_secret: configs.value[key]?.is_secret ?? false }
     messages[key] = { ok: true, text: '✓ 已保存并生效' }
     if (showSecrets[key]) inputs[key] = ''
@@ -339,6 +389,21 @@ onMounted(loadConfig)
 }
 .msg-ok { color: var(--green); }
 .msg-err { color: var(--red); }
+
+.toggle-switch {
+  width: 40px; height: 22px;
+  border-radius: 11px; border: none; cursor: pointer;
+  background: var(--border); position: relative;
+  transition: background 0.2s; flex-shrink: 0;
+}
+.toggle-switch.on { background: var(--accent); }
+.switch-knob {
+  position: absolute; top: 3px; left: 3px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: white; transition: transform 0.2s;
+  display: block;
+}
+.toggle-switch.on .switch-knob { transform: translateX(18px); }
 
 .info-card {
   display: flex; align-items: flex-start; gap: 10px;

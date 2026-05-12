@@ -48,7 +48,7 @@ def upsert_repo(db: Session, repo_data: dict, category_map: dict) -> Optional[Re
         repo = db.query(Repo).filter(Repo.github_id == full_name).first()
 
         if repo:
-            repo.description = repo_data.get("description") or repo.description
+            repo.description = (repo_data.get("description") or repo.description or "")[:1000]
             repo.language = repo_data.get("language") or repo.language
             repo.homepage = repo_data.get("homepage") or repo.homepage
             repo.stars_total = repo_data.get("stars_total", repo.stars_total)
@@ -66,7 +66,7 @@ def upsert_repo(db: Session, repo_data: dict, category_map: dict) -> Optional[Re
                 owner=repo_data.get("owner", ""),
                 repo_name=repo_data.get("repo_name", ""),
                 full_name=full_name,
-                description=repo_data.get("description", ""),
+                description=(repo_data.get("description", "") or "")[:1000],
                 language=repo_data.get("language", ""),
                 html_url=repo_data.get("html_url", f"https://github.com/{full_name}"),
                 homepage=repo_data.get("homepage", ""),

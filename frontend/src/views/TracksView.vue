@@ -138,7 +138,21 @@
               <div class="track-name">{{ track.value }}</div>
               <div v-if="track.description" class="track-desc">{{ track.description }}</div>
               <div class="track-meta mono">
-                <span v-if="track.min_stars != null">⭐ ≥ {{ track.min_stars }}</span>
+                <span v-if="track.track_type !== 'repo'">
+                  ⭐ ≥
+                  <input
+                    v-if="editingStars === track.id"
+                    class="stars-edit-input"
+                    type="number" min="0"
+                    :value="track.min_stars"
+                    @blur="saveStars(track, $event)"
+                    @keyup.enter="saveStars(track, $event)"
+                    @keyup.escape="editingStars = null"
+                    ref="starsInput"
+                    autofocus
+                  />
+                  <span v-else class="stars-value" @click="startEditStars(track.id)">{{ track.min_stars ?? 100 }} <PencilIcon :size="10" class="edit-icon" /></span>
+                </span>
                 <span>{{ formatDate(track.created_at) }}</span>
               </div>
             </div>
@@ -165,7 +179,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { PlusIcon, StarIcon, Trash2Icon } from 'lucide-vue-next'
+import { PlusIcon, StarIcon, Trash2Icon, PencilIcon } from 'lucide-vue-next'
 import AppSidebar from '@/components/AppSidebar.vue'
 import { api } from '@/api'
 
@@ -264,6 +278,21 @@ async function submitTopic() {
   } finally {
     submitting.value = false
   }
+}
+
+const editingStars = ref<number | null>(null)
+
+function startEditStars(id: number) {
+  editingStars.value = id
+}
+
+async function saveStars(track: Track, event: Event) {
+  const val = parseInt((event.target as HTMLInputElement).value)
+  if (!isNaN(val) && val !== track.min_stars) {
+    await api.updateTrackStars(track.id, val)
+    track.min_stars = val
+  }
+  editingStars.value = null
 }
 
 async function toggleTrack(track: Track) {
@@ -488,6 +517,26 @@ function onNavigate(view: string) {
   font-size: 10px;
   color: var(--text-muted);
   margin-top: 4px;
+  align-items: center;
+}
+.stars-value {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.stars-value:hover { background: var(--bg-hover); }
+.edit-icon { opacity: 0; transition: opacity 0.15s; }
+.stars-value:hover .edit-icon { opacity: 1; }
+.stars-edit-input {
+  width: 52px; font-size: 10px;
+  background: var(--bg-elevated); border: 1px solid var(--accent);
+  border-radius: 3px; color: var(--text-primary);
+  padding: 1px 4px; outline: none;
+  font-family: 'Geist Mono', monospace;
 }
 
 .track-actions {

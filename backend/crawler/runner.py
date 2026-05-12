@@ -46,6 +46,7 @@ async def run_daily_crawl() -> dict:
 
     logger.info(f"=== Daily crawl started: {today} ===")
 
+    from config import settings as cfg
     client = GitHubClient()
     db = SessionLocal()
 
@@ -86,77 +87,76 @@ async def run_daily_crawl() -> dict:
         db.commit()
         logger.info(f"  Saved {ai_filtered} AI repos from trending")
 
-        # ── 阶段 2：Search API 补充各 topic ─────────────────────────
-        logger.info("Phase 2: Fetching repos by AI topics via Search API...")
+        # ── 阶段 2：Search API 并发请求（最多3个同时），串行入库 ────
+        logger.info("Phase 2: Fetching repos by AI topics (concurrent x3)...")
         api_count = 0
-        api_saved_names = []  # 收集 Search API 写入的 repo 名，用于翻译
+        api_saved_names = []
+        # Semaphore 在当前事件循环里创建，避免跨循环问题
+        sem = asyncio.Semaphore(3 if cfg.github_token else 1)
 
-        for topic in AI_SEARCH_TOPICS:
-            try:
-                repos = await client.search_ai_repos(
-                    topic=topic,
-                    min_stars=500,
-                    per_page=20,
-                )
-                total_fetched += len(repos)
+        async def fetch_one(coro):
+            async with sem:
+                return await coro
 
-                for repo_data in repos:
+        # 并发请求所有 topic
+        topic_tasks = [fetch_one(client.search_ai_repos(t, min_stars=cfg.min_stars_topic, per_page=20))
+                       for t in AI_SEARCH_TOPICS]
+        topic_results_raw = await asyncio.gather(*topic_tasks, return_exceptions=True)
+
+        total_fetched += sum(len(r) for r in topic_results_raw if isinstance(r, list))
+        logger.info(f"  All {len(AI_SEARCH_TOPICS)} topic requests done")
+
+        # 串行入库
+        for i, repos in enumerate(topic_results_raw):
+            if isinstance(repos, Exception):
+                errors.append(f"topic error: {repos}")
+                continue
+            for repo_data in repos:
+                try:
                     repo = upsert_repo(db, repo_data, category_map)
                     if repo:
                         api_count += 1
                         api_saved_names.append(repo_data.get("full_name"))
-                        upsert_daily_stat(
-                            db, repo,
-                            stars_today=0,  # Search API 无今日增量
-                            rank=0,
-                            stat_date=today,
-                        )
-
-                db.commit()
-                logger.debug(f"  topic={topic}: {len(repos)} repos fetched")
-
-            except Exception as e:
-                err_msg = f"Error fetching topic '{topic}': {e}"
-                logger.warning(err_msg)
-                errors.append(err_msg)
-                continue
+                        upsert_daily_stat(db, repo, stars_today=0, rank=0, stat_date=today)
+                except Exception:
+                    db.rollback()
+        try:
+            db.commit()
+        except Exception as e:
+            logger.warning(f"  commit error: {e}"); db.rollback()
 
         ai_filtered += api_count
-        logger.info(f"  Saved {api_count} additional AI repos from Search API (topic)")
+        logger.info(f"  Saved {api_count} repos from topic search")
 
-        # ── 阶段 2b：关键词全文搜索 ─────────────────────────────────
-        logger.info("Phase 2b: Fetching repos by keyword search...")
+        # ── 阶段 2b：关键词全文搜索（并发）────────────────────────────
+        logger.info("Phase 2b: Fetching repos by keyword search (concurrent x3)...")
         kw_count = 0
 
-        for keyword, min_stars in AI_KEYWORD_QUERIES:
-            try:
-                repos = await client.search_by_keyword(
-                    keyword=keyword,
-                    min_stars=min_stars,
-                    per_page=20,
-                )
-                total_fetched += len(repos)
+        kw_tasks = [fetch_one(client.search_by_keyword(kw, min_stars=cfg.min_stars_keyword, per_page=20))
+                    for kw, _ in AI_KEYWORD_QUERIES]
+        kw_results_raw = await asyncio.gather(*kw_tasks, return_exceptions=True)
 
-                for repo_data in repos:
+        total_fetched += sum(len(r) for r in kw_results_raw if isinstance(r, list))
+        logger.info(f"  All {len(AI_KEYWORD_QUERIES)} keyword requests done")
+
+        # 串行入库
+        for repos in kw_results_raw:
+            if isinstance(repos, Exception):
+                errors.append(f"keyword error: {repos}")
+                continue
+            for repo_data in repos:
+                try:
                     repo = upsert_repo(db, repo_data, category_map)
                     if repo:
                         kw_count += 1
                         api_saved_names.append(repo_data.get("full_name"))
-                        upsert_daily_stat(
-                            db, repo,
-                            stars_today=0,
-                            rank=0,
-                            stat_date=today,
-                        )
-
-                db.commit()
-                logger.debug(f"  keyword='{keyword}': {len(repos)} repos fetched")
-
-            except Exception as e:
-                err_msg = f"Error fetching keyword '{keyword}': {e}"
-                logger.warning(err_msg)
-                errors.append(err_msg)
-                continue
+                        upsert_daily_stat(db, repo, stars_today=0, rank=0, stat_date=today)
+                except Exception:
+                    db.rollback()
+        try:
+            db.commit()
+        except Exception as e:
+            logger.warning(f"  commit error: {e}"); db.rollback()
 
         ai_filtered += kw_count
         logger.info(f"  Saved {kw_count} additional AI repos from keyword search")
@@ -169,57 +169,39 @@ async def run_daily_crawl() -> dict:
         total_fetched += custom_result["total"]
         logger.info(f"  Custom tracks: fetched={custom_result['total']}, saved={custom_result['saved']}")
 
-        # ── 阶段 3：中文 README 检测（不依赖 DeepSeek）────────────────
-        logger.info("Phase 3: Detecting Chinese READMEs...")
-        # 合并所有本次涉及的 repo（trending + search + 自定义追踪）
+        # ── 阶段 3：翻译（后台异步，不阻塞爬取完成）────────────────
         all_saved_names = list({
             *[r.get("full_name") for r in trending_repos],
             *api_saved_names,
         })
-        # 补充：数据库里所有还没检测过中文 README 的 repo
-        from models import Repo as RepoModel
-        undetected_repos = (
-            db.query(RepoModel.full_name)
-            .filter(RepoModel.has_chinese_readme == 0, RepoModel.chinese_readme_path == None)
-            .limit(50)  # 每次最多检测50个，避免太慢
-            .all()
-        )
-        all_saved_names = list({*all_saved_names, *[r.full_name for r in undetected_repos]})
-
         repos_for_translation = get_repos_needing_translation(db, all_saved_names)
+        logger.info(f"  Translation candidates: {len(repos_for_translation)} repos")
 
-        cn_detected = 0
-        for repo_info in repos_for_translation:
-            if repo_info.get("has_chinese_readme") or repo_info.get("chinese_readme_path"):
-                continue
-            has_cn, cn_path = await client.detect_chinese_readme(repo_info["full_name"])
-            if has_cn and cn_path:
-                repo_obj = db.query(RepoModel).filter_by(full_name=repo_info["full_name"]).first()
-                if repo_obj:
-                    repo_obj.has_chinese_readme = 1
-                    repo_obj.chinese_readme_path = cn_path
-                    cn_detected += 1
-        if cn_detected:
-            db.commit()
-        logger.info(f"  Detected {cn_detected} repos with Chinese README")
-
-        # ── 阶段 4：翻译（DeepSeek 优先，降级到免费翻译）────────────
-        logger.info("Phase 4: Translating repo descriptions...")
-        from config import settings as cfg
+        logger.info("Phase 3: Starting translation in background...")
         from crawler.translator import batch_process, batch_process_free
 
-        if cfg.deepseek_api_key:
-            # 有 DeepSeek Key → 高质量翻译+摘要+标签
-            logger.info("  Using DeepSeek (high quality)")
-            translations = await batch_process(repos_for_translation, client, concurrency=3)
-            translated_count = apply_translations(db, translations)
-            logger.info(f"  DeepSeek processed {translated_count} repos")
-        else:
-            # 无 DeepSeek Key → 免费翻译降级（只翻译描述）
-            logger.info("  DeepSeek not configured, falling back to free translation")
-            translations = await batch_process_free(repos_for_translation, concurrency=5)
-            translated_count = apply_translations(db, translations)
-            logger.info(f"  Free translated {translated_count} repos")
+        async def _run_translation():
+            try:
+                if cfg.deepseek_api_key:
+                    logger.info("  Translation: using DeepSeek")
+                    translations = await batch_process(repos_for_translation, client, concurrency=3)
+                else:
+                    logger.info("  Translation: using free Google translator")
+                    translations = await batch_process_free(repos_for_translation, concurrency=5)
+                translated_count = apply_translations(db, translations)
+                logger.info(f"  Translation done: {translated_count} repos")
+            except asyncio.CancelledError:
+                logger.info("  Translation task cancelled (server shutdown)")
+            except RuntimeError as e:
+                if "shutdown" in str(e).lower():
+                    logger.info("  Translation task stopped (executor shutdown)")
+                else:
+                    logger.error(f"  Translation failed: {e}")
+            except Exception as e:
+                logger.error(f"  Translation failed: {e}")
+
+        asyncio.create_task(_run_translation())
+        logger.info("  Translation task started in background")
 
         duration = int(time.time() - start_time)
         status = "partial" if errors else "success"

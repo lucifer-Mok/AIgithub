@@ -12,6 +12,7 @@ export const useAppStore = defineStore('app', () => {
   const selectedCategory = ref<string>('')
   const selectedDate = ref<string>('')
   const sortBy = ref<string>('stars_today')
+  const order = ref<'asc' | 'desc'>('desc')
   const page = ref(1)
   const pageSize = ref(20)
   const lang = ref<'zh' | 'en'>('zh')  // 语言切换
@@ -46,6 +47,7 @@ export const useAppStore = defineStore('app', () => {
         category: selectedCategory.value || undefined,
         date: selectedDate.value || undefined,
         sort: sortBy.value,
+        order: order.value,
         page: page.value,
         page_size: pageSize.value,
       })
@@ -73,9 +75,14 @@ export const useAppStore = defineStore('app', () => {
     await loadRepos(true)
   }
 
-  // 切换排序
+  // 切换排序：点同一个则反转方向，点不同的则重置为 desc
   async function setSort(sort: string) {
-    sortBy.value = sort
+    if (sortBy.value === sort) {
+      order.value = order.value === 'desc' ? 'asc' : 'desc'
+    } else {
+      sortBy.value = sort
+      order.value = 'desc'
+    }
     if (sort !== 'stars_today') selectedDate.value = ''
     pageSize.value = sort === 'stars_today' ? 20 : 40
     await Promise.all([loadRepos(true), loadOverview()])
@@ -83,7 +90,7 @@ export const useAppStore = defineStore('app', () => {
 
   return {
     categories, overview, repos, total, loading,
-    selectedCategory, selectedDate, sortBy, page, pageSize, lang,
+    selectedCategory, selectedDate, sortBy, order, page, pageSize, lang,
     currentCategory,
     loadCategories, loadOverview, loadRepos, loadMore,
     setCategory, setSort,

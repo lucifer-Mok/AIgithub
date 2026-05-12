@@ -1,0 +1,5 @@
+# Kiro IDE files
+.kiro/
+
+# Playwright MCP artifacts
+.playwright-mcp/

@@ -352,8 +352,11 @@ async def batch_process_free(
 
         async with semaphore:
             # 在线程池里跑同步翻译，避免阻塞事件循环
-            loop = asyncio.get_event_loop()
-            translated = await loop.run_in_executor(None, _free_translate, description)
+            try:
+                loop = asyncio.get_event_loop()
+                translated = await loop.run_in_executor(None, _free_translate, description)
+            except RuntimeError:
+                return  # 线程池已关闭，静默退出
 
             if translated and translated != description:
                 results[full_name] = {

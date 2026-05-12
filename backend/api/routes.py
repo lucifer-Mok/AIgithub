@@ -41,6 +41,7 @@ def list_repos(
     category: Optional[str] = Query(None),
     date_str: Optional[str] = Query(None, alias="date"),
     sort: str = Query("stars_today"),
+    order: str = Query("desc", description="asc | desc"),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
@@ -60,7 +61,10 @@ def list_repos(
 
     # ── 全量模式（总星数 / AI相关度）────────────────────────────────
     if sort in ("stars_total", "ai_score"):
-        sort_col = desc(Repo.stars_total) if sort == "stars_total" else desc(Repo.ai_score)
+        if sort == "stars_total":
+            sort_col = desc(Repo.stars_total) if order == "desc" else Repo.stars_total
+        else:
+            sort_col = desc(Repo.ai_score) if order == "desc" else Repo.ai_score
         query = db.query(Repo)
         if cat_id:
             query = query.filter(Repo.category_id == cat_id)
@@ -94,7 +98,7 @@ def list_repos(
     )
     if cat_id:
         query = query.filter(Repo.category_id == cat_id)
-    query = query.order_by(desc(DailyStat.stars_today))
+    query = query.order_by(desc(DailyStat.stars_today) if order == "desc" else DailyStat.stars_today)
 
     total = query.count()
     items = query.offset((page - 1) * page_size).limit(page_size).all()
@@ -391,16 +395,23 @@ async def add_topic_track(req: AddTopicTrackRequest, db: Session = Depends(get_d
 
 
 @router.patch("/tracks/{track_id}")
-def toggle_track(
+def update_track(
     track_id: int,
-    is_active: bool = Query(...),
+    is_active: Optional[bool] = Query(None),
+    min_stars: Optional[int] = Query(None),
     db: Session = Depends(get_db),
 ):
-    """启用/禁用追踪"""
+    """更新追踪规则（启用/禁用 或 修改最低 Star 数）"""
     from crawler.track_service import toggle_track as _toggle
-    ok = _toggle(db, track_id, is_active)
-    if not ok:
+    from models import CustomTrack
+    track = db.query(CustomTrack).filter(CustomTrack.id == track_id).first()
+    if not track:
         raise HTTPException(404, "Track not found")
+    if is_active is not None:
+        track.is_active = 1 if is_active else 0
+    if min_stars is not None:
+        track.min_stars = max(0, min_stars)
+    db.commit()
     return {"success": True}
 
 

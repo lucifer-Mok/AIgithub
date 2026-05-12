@@ -75,6 +75,7 @@ export const api = {
     category?: string
     date?: string
     sort?: string
+    order?: string
     page?: number
     page_size?: number
   }) => http.get<RepoListResponse>('/repos', { params }),
@@ -112,4 +113,6 @@ export const api = {
   deleteTrack: (id: number) => http.delete(`/tracks/${id}`),
   toggleTrack: (id: number, is_active: boolean) =>
     http.patch(`/tracks/${id}`, null, { params: { is_active } }),
+  updateTrackStars: (id: number, min_stars: number) =>
+    http.patch(`/tracks/${id}`, null, { params: { min_stars } }),
 }

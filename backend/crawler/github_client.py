@@ -16,7 +16,7 @@ from typing import Optional
 import httpx
 from bs4 import BeautifulSoup
 
-from config import settings
+from config import settings, runtime
 
 logger = logging.getLogger(__name__)
 
@@ -260,7 +260,7 @@ class GitHubClient:
                 resp = await client.get(url, params=params, headers=self._api_headers)
                 if resp.status_code == 401:
                     logger.error("GitHub Token is invalid or expired (401)")
-                    settings.github_token_invalid = True
+                    runtime.github_token_invalid = True
                     return []
                 if resp.status_code == 403:
                     logger.warning("GitHub API rate limit hit, sleeping 60s...")
@@ -302,7 +302,7 @@ class GitHubClient:
                 resp = await client.get(url, params=params, headers=self._api_headers)
                 if resp.status_code == 401:
                     logger.error("GitHub Token is invalid or expired (401)")
-                    settings.github_token_invalid = True
+                    runtime.github_token_invalid = True
                     return []
                 if resp.status_code == 403:
                     logger.warning("GitHub API rate limit hit, sleeping 60s...")
@@ -329,7 +329,7 @@ class GitHubClient:
                     return None
                 if resp.status_code == 401:
                     logger.error("GitHub Token is invalid or expired (401)")
-                    settings.github_token_invalid = True
+                    runtime.github_token_invalid = True
                     return None
                 if resp.status_code == 403:
                     logger.warning("Rate limit hit on repo detail fetch")
@@ -419,12 +419,16 @@ class GitHubClient:
 
     async def check_rate_limit(self) -> dict:
         """查询当前 API 速率限制状态"""
+        token_preview = settings.github_token[:8] if settings.github_token else "EMPTY"
+        logger.info(f"check_rate_limit: using token={token_preview}... header_auth={self._api_headers.get('Authorization', 'NONE')[:20]}")
         async with httpx.AsyncClient(timeout=10, trust_env=False) as client:
             try:
                 resp = await client.get(
                     "https://api.github.com/rate_limit",
                     headers=self._api_headers,
                 )
+                if resp.status_code == 401:
+                    return {"error": "401 Unauthorized", "token_invalid": True}
                 data = resp.json()
                 core = data.get("resources", {}).get("core", {})
                 search = data.get("resources", {}).get("search", {})

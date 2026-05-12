@@ -158,7 +158,7 @@ async def add_repo_track(
     for kw in keywords:
         added = _upsert_track(
             db, "keyword", kw,
-            min_stars=max(100, repo_data.get("stars_total", 0) // 10),
+            min_stars=100,  # 关键词追踪用固定低门槛，避免漏掉相关项目
             source_repo=full_name,
             description=f"从 {full_name} 自动提取",
         )
@@ -279,6 +279,7 @@ async def run_custom_tracks(db: Session, client: GitHubClient) -> dict:
 
         except Exception as e:
             logger.warning(f"Custom track failed [{track.track_type}:{track.value}]: {e}")
+            db.rollback()  # 回滚失败的事务，让 Session 恢复正常
             continue
 
     logger.info(f"Custom tracks done: fetched={total_fetched}, saved={saved}")

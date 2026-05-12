@@ -5,6 +5,10 @@ FastAPI 应用入口
 import logging
 from contextlib import asynccontextmanager
 
+# 必须在所有其他 import 之前，用 .env 覆盖系统环境变量
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 

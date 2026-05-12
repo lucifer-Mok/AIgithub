@@ -9,12 +9,14 @@ class Settings(BaseSettings):
     db_name: str = "ai_github"
 
     github_token: str = ""
-    # 运行时状态（不写入 .env，只在内存里）
-    github_token_invalid: bool = False  # 遇到 401 时标记为 True
 
     deepseek_api_key: str = ""
     deepseek_base_url: str = "https://api.deepseek.com"
     deepseek_model: str = "deepseek-chat"
+
+    # 爬取配置
+    min_stars_topic: int = 500
+    min_stars_keyword: int = 200
 
     api_host: str = "0.0.0.0"
     api_port: int = 8000
@@ -32,3 +34,9 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+# 运行时状态（不属于配置，不从 .env 读取，重启后自动重置）
+class _RuntimeState:
+    github_token_invalid: bool = False
+
+runtime = _RuntimeState()

@@ -33,6 +33,9 @@
           @click="store.setSort(opt.value)">
           <component :is="opt.icon" :size="12" />
           {{ opt.label }}
+          <span v-if="store.sortBy === opt.value" class="order-arrow">
+            {{ store.order === 'desc' ? '↓' : '↑' }}
+          </span>
         </button>
       </div>
     </div>
@@ -210,6 +213,7 @@ function goHome(slug: string) {
 }
 .sort-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
 .sort-btn.active { background: var(--accent-glow); color: var(--accent); font-weight: 500; }
+.order-arrow { margin-left: auto; font-size: 11px; font-weight: 700; }
 
 .category-nav { display: flex; flex-direction: column; gap: 1px; }
 .cat-item {

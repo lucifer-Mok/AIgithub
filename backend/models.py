@@ -30,7 +30,7 @@ class Repo(Base):
     owner = Column(String(100), nullable=False)
     repo_name = Column(String(200), nullable=False)
     full_name = Column(String(300), nullable=False)
-    description = Column(Text)
+    description = Column(String(1000))
     language = Column(String(50))
     html_url = Column(String(500))
     homepage = Column(String(500))
