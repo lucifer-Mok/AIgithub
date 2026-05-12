@@ -1,1 +1,0 @@
-- generic [ref=e2]: "{\"DEEPSEEK_BASE_URL\":{\"value\":\"https://api.deepseek.com\",\"is_set\":true,\"is_secret\":false},\"GITHUB_TOKEN\":{\"value\":\"ghp_****uZFQ\",\"is_set\":true,\"is_secret\":true},\"DEEPSEEK_API_KEY\":{\"value\":\"\",\"is_set\":false,\"is_secret\":true},\"DEEPSEEK_MODEL\":{\"value\":\"deepseek-chat\",\"is_set\":true,\"is_secret\":false}}"
