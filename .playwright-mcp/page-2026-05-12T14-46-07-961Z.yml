@@ -1,0 +1,1 @@
+- generic [ref=e2]: "{\"status\":\"ok\",\"github_token\":true,\"scheduler\":{\"running\":true,\"jobs\":[{\"id\":\"daily_crawl\",\"name\":\"Daily AI GitHub Crawl\",\"next_run\":\"2026-05-13T02:00:00+08:00\"}]}}"

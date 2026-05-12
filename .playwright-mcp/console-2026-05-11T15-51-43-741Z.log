@@ -1,0 +1,1038 @@
+[     404ms] [LOG] 🍍 "app" store installed 🆕 @ http://localhost:5173/node_modules/.vite/deps/pinia.js?v=0f4a55f6:3788
+[     583ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=9 repo= {id: 9, full_name: NousResearch/hermes-agent, owner: NousResearch, repo_name: hermes-agent, name_zh: null} style= {animationDelay: 0ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     584ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=1 repo= {id: 1, full_name: bytedance/UI-TARS-desktop, owner: bytedance, repo_name: UI-TARS-desktop, name_zh: null} style= {animationDelay: 30ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     585ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=3 repo= {id: 3, full_name: decolua/9router, owner: decolua, repo_name: 9router, name_zh: null} style= {animationDelay: 60ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     585ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=10 repo= {id: 10, full_name: rohitg00/agentmemory, owner: rohitg00, repo_name: agentmemory, name_zh: null} style= {animationDelay: 90ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     586ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=2 repo= {id: 2, full_name: yikart/AiToEarn, owner: yikart, repo_name: AiToEarn, name_zh: null} style= {animationDelay: 120ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     587ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=6 repo= {id: 6, full_name: Lordog/dive-into-llms, owner: Lordog, repo_name: dive-into-llms, name_zh: null} style= {animationDelay: 150ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     587ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=5 repo= {id: 5, full_name: millionco/react-doctor, owner: millionco, repo_name: react-doctor, name_zh: null} style= {animationDelay: 180ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     588ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=4 repo= {id: 4, full_name: tinyhumansai/openhuman, owner: tinyhumansai, repo_name: openhuman, name_zh: null} style= {animationDelay: 210ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     588ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=8 repo= {id: 8, full_name: rasbt/LLMs-from-scratch, owner: rasbt, repo_name: LLMs-from-scratch, name_zh: null} style= {animationDelay: 240ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     589ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=11 repo= {id: 11, full_name: test-org/test-llm-repo, owner: test-org, repo_name: test-llm-repo, name_zh: null} style= {animationDelay: 270ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     590ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=7 repo= {id: 7, full_name: AUTOMATIC1111/stable-diffusion-webui, owner: AUTOMATIC1111, repo_name: stable-diffusion-webui, name_zh: null} style= {animationDelay: 300ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     590ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=12 repo= {id: 12, full_name: Significant-Gravitas/AutoGPT, owner: Significant-Gravitas, repo_name: AutoGPT, name_zh: null} style= {animationDelay: 330ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     591ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=13 repo= {id: 13, full_name: affaan-m/everything-claude-code, owner: affaan-m, repo_name: everything-claude-code, name_zh: null} style= {animationDelay: 360ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     591ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=14 repo= {id: 14, full_name: ollama/ollama, owner: ollama, repo_name: ollama, name_zh: null} style= {animationDelay: 390ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     592ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=15 repo= {id: 15, full_name: f/prompts.chat, owner: f, repo_name: prompts.chat, name_zh: null} style= {animationDelay: 420ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     592ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=16 repo= {id: 16, full_name: huggingface/transformers, owner: huggingface, repo_name: transformers, name_zh: null} style= {animationDelay: 450ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     593ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=17 repo= {id: 17, full_name: langgenius/dify, owner: langgenius, repo_name: dify, name_zh: null} style= {animationDelay: 480ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     593ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=18 repo= {id: 18, full_name: open-webui/open-webui, owner: open-webui, repo_name: open-webui, name_zh: null} style= {animationDelay: 510ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     594ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=19 repo= {id: 19, full_name: langchain-ai/langchain, owner: langchain-ai, repo_name: langchain, name_zh: null} style= {animationDelay: 540ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[     594ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=20 repo= {id: 20, full_name: firecrawl/firecrawl, owner: firecrawl, repo_name: firecrawl, name_zh: null} style= {animationDelay: 570ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[    4495ms] [WARNING] [Vue warn]: Unhandled error during execution of render function 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[    4495ms] [WARNING] [Vue warn]: Unhandled error during execution of component update 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[    4495ms] TypeError: Cannot read properties of undefined (reading 'toString')
+    at Proxy.formatNum (http://localhost:5173/src/components/RepoDrawer.vue:57:13)
+    at Proxy._sfc_render (http://localhost:5173/src/components/RepoDrawer.vue:385:38)
+    at renderComponentRoot (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:4714:35)
+    at ReactiveEffect.componentUpdateFn [as fn] (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:5609:22)
+    at ReactiveEffect.run (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:426:16)
+    at ReactiveEffect.runIfDirty (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:453:27)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1890:31)
+    at flushJobs (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:2039:5)
+[    4545ms] [WARNING] [Vue warn]: Unhandled error during execution of render function 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[    4545ms] [WARNING] [Vue warn]: Unhandled error during execution of component update 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[    4545ms] TypeError: Cannot read properties of undefined (reading 'toString')
+    at Proxy.formatNum (http://localhost:5173/src/components/RepoDrawer.vue:57:13)
+    at Proxy._sfc_render (http://localhost:5173/src/components/RepoDrawer.vue:385:38)
+    at renderComponentRoot (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:4714:35)
+    at ReactiveEffect.componentUpdateFn [as fn] (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:5609:22)
+    at ReactiveEffect.run (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:426:16)
+    at ReactiveEffect.runIfDirty (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:453:27)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1890:31)
+    at flushJobs (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:2039:5)
+[   34023ms] [LOG] 🍍 "app" store installed 🆕 @ http://localhost:5173/node_modules/.vite/deps/pinia.js?v=0f4a55f6:3788
+[   34256ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=9 repo= {id: 9, full_name: NousResearch/hermes-agent, owner: NousResearch, repo_name: hermes-agent, name_zh: null} style= {animationDelay: 0ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34258ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=1 repo= {id: 1, full_name: bytedance/UI-TARS-desktop, owner: bytedance, repo_name: UI-TARS-desktop, name_zh: null} style= {animationDelay: 30ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34260ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=3 repo= {id: 3, full_name: decolua/9router, owner: decolua, repo_name: 9router, name_zh: null} style= {animationDelay: 60ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34261ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=10 repo= {id: 10, full_name: rohitg00/agentmemory, owner: rohitg00, repo_name: agentmemory, name_zh: null} style= {animationDelay: 90ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34261ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=2 repo= {id: 2, full_name: yikart/AiToEarn, owner: yikart, repo_name: AiToEarn, name_zh: null} style= {animationDelay: 120ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34262ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=6 repo= {id: 6, full_name: Lordog/dive-into-llms, owner: Lordog, repo_name: dive-into-llms, name_zh: null} style= {animationDelay: 150ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34262ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=5 repo= {id: 5, full_name: millionco/react-doctor, owner: millionco, repo_name: react-doctor, name_zh: null} style= {animationDelay: 180ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34264ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=4 repo= {id: 4, full_name: tinyhumansai/openhuman, owner: tinyhumansai, repo_name: openhuman, name_zh: null} style= {animationDelay: 210ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34265ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=8 repo= {id: 8, full_name: rasbt/LLMs-from-scratch, owner: rasbt, repo_name: LLMs-from-scratch, name_zh: null} style= {animationDelay: 240ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34266ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=11 repo= {id: 11, full_name: test-org/test-llm-repo, owner: test-org, repo_name: test-llm-repo, name_zh: null} style= {animationDelay: 270ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34268ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=7 repo= {id: 7, full_name: AUTOMATIC1111/stable-diffusion-webui, owner: AUTOMATIC1111, repo_name: stable-diffusion-webui, name_zh: null} style= {animationDelay: 300ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34269ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=12 repo= {id: 12, full_name: Significant-Gravitas/AutoGPT, owner: Significant-Gravitas, repo_name: AutoGPT, name_zh: null} style= {animationDelay: 330ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34270ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=13 repo= {id: 13, full_name: affaan-m/everything-claude-code, owner: affaan-m, repo_name: everything-claude-code, name_zh: null} style= {animationDelay: 360ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34270ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=14 repo= {id: 14, full_name: ollama/ollama, owner: ollama, repo_name: ollama, name_zh: null} style= {animationDelay: 390ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34271ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=15 repo= {id: 15, full_name: f/prompts.chat, owner: f, repo_name: prompts.chat, name_zh: null} style= {animationDelay: 420ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34272ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=16 repo= {id: 16, full_name: huggingface/transformers, owner: huggingface, repo_name: transformers, name_zh: null} style= {animationDelay: 450ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34274ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=17 repo= {id: 17, full_name: langgenius/dify, owner: langgenius, repo_name: dify, name_zh: null} style= {animationDelay: 480ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34275ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=18 repo= {id: 18, full_name: open-webui/open-webui, owner: open-webui, repo_name: open-webui, name_zh: null} style= {animationDelay: 510ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34276ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=19 repo= {id: 19, full_name: langchain-ai/langchain, owner: langchain-ai, repo_name: langchain, name_zh: null} style= {animationDelay: 540ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   34277ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=20 repo= {id: 20, full_name: firecrawl/firecrawl, owner: firecrawl, repo_name: firecrawl, name_zh: null} style= {animationDelay: 570ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47731ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=21 repo= {id: 21, full_name: browser-use/browser-use, owner: browser-use, repo_name: browser-use, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47731ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=22 repo= {id: 22, full_name: vllm-project/vllm, owner: vllm-project, repo_name: vllm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47732ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=23 repo= {id: 23, full_name: mlabonne/llm-course, owner: mlabonne, repo_name: llm-course, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47732ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=24 repo= {id: 24, full_name: TauricResearch/TradingAgents, owner: TauricResearch, repo_name: TradingAgents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47733ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=25 repo= {id: 25, full_name: OpenHands/OpenHands, owner: OpenHands, repo_name: OpenHands, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47733ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=26 repo= {id: 26, full_name: hiyouga/LlamaFactory, owner: hiyouga, repo_name: LlamaFactory, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47734ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=27 repo= {id: 27, full_name: FoundationAgents/MetaGPT, owner: FoundationAgents, repo_name: MetaGPT, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47734ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=28 repo= {id: 28, full_name: bytedance/deer-flow, owner: bytedance, repo_name: deer-flow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47735ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=29 repo= {id: 29, full_name: unslothai/unsloth, owner: unslothai, repo_name: unsloth, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47736ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=30 repo= {id: 30, full_name: jingyaogong/minimind, owner: jingyaogong, repo_name: minimind, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47736ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=31 repo= {id: 31, full_name: ScrapeGraphAI/Scrapegraph-ai, owner: ScrapeGraphAI, repo_name: Scrapegraph-ai, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47737ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=32 repo= {id: 32, full_name: The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge, owner: The-Pocket, repo_name: PocketFlow-Tutorial-Codebase-Knowledge, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47737ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=33 repo= {id: 33, full_name: The-Pocket/PocketFlow, owner: The-Pocket, repo_name: PocketFlow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47738ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=34 repo= {id: 34, full_name: OpenSPG/KAG, owner: OpenSPG, repo_name: KAG, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47738ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=35 repo= {id: 35, full_name: 0xPlaygrounds/rig, owner: 0xPlaygrounds, repo_name: rig, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47739ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=36 repo= {id: 36, full_name: InternLM/InternLM, owner: InternLM, repo_name: InternLM, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47739ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=37 repo= {id: 37, full_name: open-compass/opencompass, owner: open-compass, repo_name: opencompass, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47740ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=38 repo= {id: 38, full_name: gluonfield/enchanted, owner: gluonfield, repo_name: enchanted, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47740ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=39 repo= {id: 39, full_name: BrainBlend-AI/atomic-agents, owner: BrainBlend-AI, repo_name: atomic-agents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   47741ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=40 repo= {id: 40, full_name: skyzh/tiny-llm, owner: skyzh, repo_name: tiny-llm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52625ms] [LOG] 🍍 "app" store installed 🆕 @ http://localhost:5173/node_modules/.vite/deps/pinia.js?v=0f4a55f6:3788
+[   52873ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=9 repo= {id: 9, full_name: NousResearch/hermes-agent, owner: NousResearch, repo_name: hermes-agent, name_zh: null} style= {animationDelay: 0ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52874ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=1 repo= {id: 1, full_name: bytedance/UI-TARS-desktop, owner: bytedance, repo_name: UI-TARS-desktop, name_zh: null} style= {animationDelay: 30ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52876ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=3 repo= {id: 3, full_name: decolua/9router, owner: decolua, repo_name: 9router, name_zh: null} style= {animationDelay: 60ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52877ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=10 repo= {id: 10, full_name: rohitg00/agentmemory, owner: rohitg00, repo_name: agentmemory, name_zh: null} style= {animationDelay: 90ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52878ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=2 repo= {id: 2, full_name: yikart/AiToEarn, owner: yikart, repo_name: AiToEarn, name_zh: null} style= {animationDelay: 120ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52880ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=6 repo= {id: 6, full_name: Lordog/dive-into-llms, owner: Lordog, repo_name: dive-into-llms, name_zh: null} style= {animationDelay: 150ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52881ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=5 repo= {id: 5, full_name: millionco/react-doctor, owner: millionco, repo_name: react-doctor, name_zh: null} style= {animationDelay: 180ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52882ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=4 repo= {id: 4, full_name: tinyhumansai/openhuman, owner: tinyhumansai, repo_name: openhuman, name_zh: null} style= {animationDelay: 210ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52883ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=8 repo= {id: 8, full_name: rasbt/LLMs-from-scratch, owner: rasbt, repo_name: LLMs-from-scratch, name_zh: null} style= {animationDelay: 240ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52884ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=11 repo= {id: 11, full_name: test-org/test-llm-repo, owner: test-org, repo_name: test-llm-repo, name_zh: null} style= {animationDelay: 270ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52885ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=7 repo= {id: 7, full_name: AUTOMATIC1111/stable-diffusion-webui, owner: AUTOMATIC1111, repo_name: stable-diffusion-webui, name_zh: null} style= {animationDelay: 300ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52886ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=12 repo= {id: 12, full_name: Significant-Gravitas/AutoGPT, owner: Significant-Gravitas, repo_name: AutoGPT, name_zh: null} style= {animationDelay: 330ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52888ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=13 repo= {id: 13, full_name: affaan-m/everything-claude-code, owner: affaan-m, repo_name: everything-claude-code, name_zh: null} style= {animationDelay: 360ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52889ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=14 repo= {id: 14, full_name: ollama/ollama, owner: ollama, repo_name: ollama, name_zh: null} style= {animationDelay: 390ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52890ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=15 repo= {id: 15, full_name: f/prompts.chat, owner: f, repo_name: prompts.chat, name_zh: null} style= {animationDelay: 420ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52893ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=16 repo= {id: 16, full_name: huggingface/transformers, owner: huggingface, repo_name: transformers, name_zh: null} style= {animationDelay: 450ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52894ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=17 repo= {id: 17, full_name: langgenius/dify, owner: langgenius, repo_name: dify, name_zh: null} style= {animationDelay: 480ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52895ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=18 repo= {id: 18, full_name: open-webui/open-webui, owner: open-webui, repo_name: open-webui, name_zh: null} style= {animationDelay: 510ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52896ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=19 repo= {id: 19, full_name: langchain-ai/langchain, owner: langchain-ai, repo_name: langchain, name_zh: null} style= {animationDelay: 540ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   52897ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=20 repo= {id: 20, full_name: firecrawl/firecrawl, owner: firecrawl, repo_name: firecrawl, name_zh: null} style= {animationDelay: 570ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57982ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=21 repo= {id: 21, full_name: browser-use/browser-use, owner: browser-use, repo_name: browser-use, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57983ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=22 repo= {id: 22, full_name: vllm-project/vllm, owner: vllm-project, repo_name: vllm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57983ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=23 repo= {id: 23, full_name: mlabonne/llm-course, owner: mlabonne, repo_name: llm-course, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57984ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=24 repo= {id: 24, full_name: TauricResearch/TradingAgents, owner: TauricResearch, repo_name: TradingAgents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57985ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=25 repo= {id: 25, full_name: OpenHands/OpenHands, owner: OpenHands, repo_name: OpenHands, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57985ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=26 repo= {id: 26, full_name: hiyouga/LlamaFactory, owner: hiyouga, repo_name: LlamaFactory, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57986ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=27 repo= {id: 27, full_name: FoundationAgents/MetaGPT, owner: FoundationAgents, repo_name: MetaGPT, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57986ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=28 repo= {id: 28, full_name: bytedance/deer-flow, owner: bytedance, repo_name: deer-flow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57987ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=29 repo= {id: 29, full_name: unslothai/unsloth, owner: unslothai, repo_name: unsloth, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57987ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=30 repo= {id: 30, full_name: jingyaogong/minimind, owner: jingyaogong, repo_name: minimind, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57988ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=31 repo= {id: 31, full_name: ScrapeGraphAI/Scrapegraph-ai, owner: ScrapeGraphAI, repo_name: Scrapegraph-ai, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57988ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=32 repo= {id: 32, full_name: The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge, owner: The-Pocket, repo_name: PocketFlow-Tutorial-Codebase-Knowledge, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57989ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=33 repo= {id: 33, full_name: The-Pocket/PocketFlow, owner: The-Pocket, repo_name: PocketFlow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57989ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=34 repo= {id: 34, full_name: OpenSPG/KAG, owner: OpenSPG, repo_name: KAG, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57990ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=35 repo= {id: 35, full_name: 0xPlaygrounds/rig, owner: 0xPlaygrounds, repo_name: rig, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57990ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=36 repo= {id: 36, full_name: InternLM/InternLM, owner: InternLM, repo_name: InternLM, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57992ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=37 repo= {id: 37, full_name: open-compass/opencompass, owner: open-compass, repo_name: opencompass, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57993ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=38 repo= {id: 38, full_name: gluonfield/enchanted, owner: gluonfield, repo_name: enchanted, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57993ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=39 repo= {id: 39, full_name: BrainBlend-AI/atomic-agents, owner: BrainBlend-AI, repo_name: atomic-agents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   57994ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=40 repo= {id: 40, full_name: skyzh/tiny-llm, owner: skyzh, repo_name: tiny-llm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61552ms] [LOG] 🍍 "app" store installed 🆕 @ http://localhost:5173/node_modules/.vite/deps/pinia.js?v=0f4a55f6:3788
+[   61814ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=9 repo= {id: 9, full_name: NousResearch/hermes-agent, owner: NousResearch, repo_name: hermes-agent, name_zh: null} style= {animationDelay: 0ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61815ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=1 repo= {id: 1, full_name: bytedance/UI-TARS-desktop, owner: bytedance, repo_name: UI-TARS-desktop, name_zh: null} style= {animationDelay: 30ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61815ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=3 repo= {id: 3, full_name: decolua/9router, owner: decolua, repo_name: 9router, name_zh: null} style= {animationDelay: 60ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61816ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=10 repo= {id: 10, full_name: rohitg00/agentmemory, owner: rohitg00, repo_name: agentmemory, name_zh: null} style= {animationDelay: 90ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61816ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=2 repo= {id: 2, full_name: yikart/AiToEarn, owner: yikart, repo_name: AiToEarn, name_zh: null} style= {animationDelay: 120ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61818ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=6 repo= {id: 6, full_name: Lordog/dive-into-llms, owner: Lordog, repo_name: dive-into-llms, name_zh: null} style= {animationDelay: 150ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61819ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=5 repo= {id: 5, full_name: millionco/react-doctor, owner: millionco, repo_name: react-doctor, name_zh: null} style= {animationDelay: 180ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61819ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=4 repo= {id: 4, full_name: tinyhumansai/openhuman, owner: tinyhumansai, repo_name: openhuman, name_zh: null} style= {animationDelay: 210ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61820ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=8 repo= {id: 8, full_name: rasbt/LLMs-from-scratch, owner: rasbt, repo_name: LLMs-from-scratch, name_zh: null} style= {animationDelay: 240ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61821ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=11 repo= {id: 11, full_name: test-org/test-llm-repo, owner: test-org, repo_name: test-llm-repo, name_zh: null} style= {animationDelay: 270ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61821ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=7 repo= {id: 7, full_name: AUTOMATIC1111/stable-diffusion-webui, owner: AUTOMATIC1111, repo_name: stable-diffusion-webui, name_zh: null} style= {animationDelay: 300ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61822ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=12 repo= {id: 12, full_name: Significant-Gravitas/AutoGPT, owner: Significant-Gravitas, repo_name: AutoGPT, name_zh: null} style= {animationDelay: 330ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61823ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=13 repo= {id: 13, full_name: affaan-m/everything-claude-code, owner: affaan-m, repo_name: everything-claude-code, name_zh: null} style= {animationDelay: 360ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61823ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=14 repo= {id: 14, full_name: ollama/ollama, owner: ollama, repo_name: ollama, name_zh: null} style= {animationDelay: 390ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61824ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=15 repo= {id: 15, full_name: f/prompts.chat, owner: f, repo_name: prompts.chat, name_zh: null} style= {animationDelay: 420ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61824ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=16 repo= {id: 16, full_name: huggingface/transformers, owner: huggingface, repo_name: transformers, name_zh: null} style= {animationDelay: 450ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61825ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=17 repo= {id: 17, full_name: langgenius/dify, owner: langgenius, repo_name: dify, name_zh: null} style= {animationDelay: 480ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61825ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=18 repo= {id: 18, full_name: open-webui/open-webui, owner: open-webui, repo_name: open-webui, name_zh: null} style= {animationDelay: 510ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61826ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=19 repo= {id: 19, full_name: langchain-ai/langchain, owner: langchain-ai, repo_name: langchain, name_zh: null} style= {animationDelay: 540ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   61827ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=20 repo= {id: 20, full_name: firecrawl/firecrawl, owner: firecrawl, repo_name: firecrawl, name_zh: null} style= {animationDelay: 570ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   66911ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="tinyhumansai/openhuman" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   71197ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   73560ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="decolua/9router" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   76748ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="NousResearch/hermes-agent" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   78422ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="bytedance/UI-TARS-desktop" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   80365ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous > 
+  at <RepoDrawer key=0 repo-name="Lordog/dive-into-llms" onClose=fn > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82470ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=21 repo= {id: 21, full_name: browser-use/browser-use, owner: browser-use, repo_name: browser-use, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82470ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=22 repo= {id: 22, full_name: vllm-project/vllm, owner: vllm-project, repo_name: vllm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82471ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=23 repo= {id: 23, full_name: mlabonne/llm-course, owner: mlabonne, repo_name: llm-course, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82472ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=24 repo= {id: 24, full_name: TauricResearch/TradingAgents, owner: TauricResearch, repo_name: TradingAgents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82472ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=25 repo= {id: 25, full_name: OpenHands/OpenHands, owner: OpenHands, repo_name: OpenHands, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82473ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=26 repo= {id: 26, full_name: hiyouga/LlamaFactory, owner: hiyouga, repo_name: LlamaFactory, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82473ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=27 repo= {id: 27, full_name: FoundationAgents/MetaGPT, owner: FoundationAgents, repo_name: MetaGPT, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82474ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=28 repo= {id: 28, full_name: bytedance/deer-flow, owner: bytedance, repo_name: deer-flow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82475ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=29 repo= {id: 29, full_name: unslothai/unsloth, owner: unslothai, repo_name: unsloth, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82475ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=30 repo= {id: 30, full_name: jingyaogong/minimind, owner: jingyaogong, repo_name: minimind, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82476ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=31 repo= {id: 31, full_name: ScrapeGraphAI/Scrapegraph-ai, owner: ScrapeGraphAI, repo_name: Scrapegraph-ai, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82477ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=32 repo= {id: 32, full_name: The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge, owner: The-Pocket, repo_name: PocketFlow-Tutorial-Codebase-Knowledge, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82477ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=33 repo= {id: 33, full_name: The-Pocket/PocketFlow, owner: The-Pocket, repo_name: PocketFlow, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82478ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=34 repo= {id: 34, full_name: OpenSPG/KAG, owner: OpenSPG, repo_name: KAG, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82478ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=35 repo= {id: 35, full_name: 0xPlaygrounds/rig, owner: 0xPlaygrounds, repo_name: rig, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82479ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=36 repo= {id: 36, full_name: InternLM/InternLM, owner: InternLM, repo_name: InternLM, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82479ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=37 repo= {id: 37, full_name: open-compass/opencompass, owner: open-compass, repo_name: opencompass, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82480ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=38 repo= {id: 38, full_name: gluonfield/enchanted, owner: gluonfield, repo_name: enchanted, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82481ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=39 repo= {id: 39, full_name: BrainBlend-AI/atomic-agents, owner: BrainBlend-AI, repo_name: atomic-agents, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   82482ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=40 repo= {id: 40, full_name: skyzh/tiny-llm, owner: skyzh, repo_name: tiny-llm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84761ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=41 repo= {id: 41, full_name: verazuo/jailbreak_llms, owner: verazuo, repo_name: jailbreak_llms, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84762ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=42 repo= {id: 42, full_name: ridgerchu/matmulfreellm, owner: ridgerchu, repo_name: matmulfreellm, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84763ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=43 repo= {id: 43, full_name: InternLM/InternLM-XComposer, owner: InternLM, repo_name: InternLM-XComposer, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84763ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=44 repo= {id: 44, full_name: JIA-Lab-research/LISA, owner: JIA-Lab-research, repo_name: LISA, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84764ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=45 repo= {id: 45, full_name: RManLuo/Awesome-LLM-KG, owner: RManLuo, repo_name: Awesome-LLM-KG, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84764ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=46 repo= {id: 46, full_name: genieincodebottle/generative-ai, owner: genieincodebottle, repo_name: generative-ai, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84765ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=47 repo= {id: 47, full_name: hyp1231/awesome-llm-powered-agent, owner: hyp1231, repo_name: awesome-llm-powered-agent, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84765ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=48 repo= {id: 48, full_name: EgoAlpha/prompt-in-context-learning, owner: EgoAlpha, repo_name: prompt-in-context-learning, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84766ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=49 repo= {id: 49, full_name: intel/intel-extension-for-transformers, owner: intel, repo_name: intel-extension-for-transformers, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84767ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=50 repo= {id: 50, full_name: microsoft/generative-ai-for-beginners, owner: microsoft, repo_name: generative-ai-for-beginners, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84767ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=51 repo= {id: 51, full_name: lobehub/lobehub, owner: lobehub, repo_name: lobehub, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84768ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=52 repo= {id: 52, full_name: xtekky/gpt4free, owner: xtekky, repo_name: gpt4free, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84768ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=53 repo= {id: 53, full_name: PlexPt/awesome-chatgpt-prompts-zh, owner: PlexPt, repo_name: awesome-chatgpt-prompts-zh, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84768ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=54 repo= {id: 54, full_name: lencx/ChatGPT, owner: lencx, repo_name: ChatGPT, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84769ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=55 repo= {id: 55, full_name: janhq/jan, owner: janhq, repo_name: jan, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84769ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=56 repo= {id: 56, full_name: chatboxai/chatbox, owner: chatboxai, repo_name: chatbox, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84770ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=57 repo= {id: 57, full_name: 2noise/ChatTTS, owner: 2noise, repo_name: ChatTTS, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84770ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=58 repo= {id: 58, full_name: chatchat-space/Langchain-Chatchat, owner: chatchat-space, repo_name: Langchain-Chatchat, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84771ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=59 repo= {id: 59, full_name: chatanywhere/GPT_API_free, owner: chatanywhere, repo_name: GPT_API_free, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752
+[   84771ms] [WARNING] [Vue warn]: Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js". 
+  at <Anonymous size=14 > 
+  at <RepoCard key=60 repo= {id: 60, full_name: reworkd/AgentGPT, owner: reworkd, repo_name: AgentGPT, name_zh: null} style= {animationDelay: 600ms}  ... > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=ce0e8271:1752

@@ -1,0 +1,681 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e10]: AI Radar
+        - generic [ref=e11]: β
+      - generic [ref=e12]:
+        - generic [ref=e13]: 日期
+        - generic [ref=e14] [cursor=pointer]:
+          - text: 5月11日
+          - img [ref=e15]
+      - generic [ref=e17]:
+        - generic [ref=e18]: 排序
+        - generic [ref=e19]:
+          - button "今日热度" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - text: 今日热度
+          - button "总星数" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - text: 总星数
+          - button "AI 相关度" [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+            - text: AI 相关度
+      - generic [ref=e30]:
+        - generic [ref=e31]: 分类
+        - navigation [ref=e32]:
+          - button "🌐 全部 564" [ref=e149] [cursor=pointer]:
+            - generic [ref=e34]: 🌐
+            - generic [ref=e35]: 全部
+            - generic [ref=e36]: "564"
+          - button "🧠 大语言模型 163" [ref=e150] [cursor=pointer]:
+            - generic [ref=e38]: 🧠
+            - generic [ref=e39]: 大语言模型
+            - generic [ref=e40]: "163"
+          - button "🔍 RAG检索增强 50" [ref=e151] [cursor=pointer]:
+            - generic [ref=e42]: 🔍
+            - generic [ref=e43]: RAG检索增强
+            - generic [ref=e44]: "50"
+          - button "🤖 AI Agent 139" [ref=e152] [cursor=pointer]:
+            - generic [ref=e46]: 🤖
+            - generic [ref=e47]: AI Agent
+            - generic [ref=e48]: "139"
+          - button "🔌 MCP协议 64" [ref=e153] [cursor=pointer]:
+            - generic [ref=e50]: 🔌
+            - generic [ref=e51]: MCP协议
+            - generic [ref=e52]: "64"
+          - button "🎨 图像视觉 49" [ref=e154] [cursor=pointer]:
+            - generic [ref=e54]: 🎨
+            - generic [ref=e55]: 图像视觉
+            - generic [ref=e56]: "49"
+          - button "🎵 语音音频 21" [ref=e155] [cursor=pointer]:
+            - generic [ref=e58]: 🎵
+            - generic [ref=e59]: 语音音频
+            - generic [ref=e60]: "21"
+          - button "⚙️ 模型训练 13" [ref=e156] [cursor=pointer]:
+            - generic [ref=e62]: ⚙️
+            - generic [ref=e63]: 模型训练
+            - generic [ref=e64]: "13"
+          - button "⚡ 模型推理 14" [ref=e157] [cursor=pointer]:
+            - generic [ref=e66]: ⚡
+            - generic [ref=e67]: 模型推理
+            - generic [ref=e68]: "14"
+          - button "🛠️ AI工具链 1" [ref=e158] [cursor=pointer]:
+            - generic [ref=e70]: 🛠️
+            - generic [ref=e71]: AI工具链
+            - generic [ref=e72]: "1"
+          - button "📊 数据集 1" [ref=e159] [cursor=pointer]:
+            - generic [ref=e74]: 📊
+            - generic [ref=e75]: 数据集
+            - generic [ref=e76]: "1"
+          - button "🛡️ AI安全 8" [ref=e160] [cursor=pointer]:
+            - generic [ref=e78]: 🛡️
+            - generic [ref=e79]: AI安全
+            - generic [ref=e80]: "8"
+          - button "🦾 具身智能 21" [ref=e161] [cursor=pointer]:
+            - generic [ref=e82]: 🦾
+            - generic [ref=e83]: 具身智能
+            - generic [ref=e84]: "21"
+          - button "💻 代码生成 3" [ref=e162] [cursor=pointer]:
+            - generic [ref=e86]: 💻
+            - generic [ref=e87]: 代码生成
+            - generic [ref=e88]: "3"
+          - button "✨ 其他AI 0" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: ✨
+            - generic [ref=e91]: 其他AI
+            - generic [ref=e92]: "0"
+      - button "自定义追踪" [ref=e94] [cursor=pointer]:
+        - img [ref=e95]
+        - text: 自定义追踪
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 今日收录
+          - generic [ref=e100]: "564"
+        - generic [ref=e101]:
+          - generic [ref=e102]: 总计
+          - generic [ref=e103]: "564"
+        - generic [ref=e104]:
+          - generic [ref=e105]: 今日 ⭐
+          - generic [ref=e106]: 94.3k
+    - main [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - heading "🌐 全部 AI 项目" [level=1] [ref=e110]
+          - generic [ref=e111]: 564 个项目
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - img [ref=e114]
+            - textbox "搜索项目..." [ref=e117]
+          - button "立即抓取" [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+            - text: 立即抓取
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - generic [ref=e126]: 今日收录
+          - generic [ref=e127]: "564"
+        - generic [ref=e128]:
+          - generic [ref=e129]: 今日 ⭐ 增量
+          - generic [ref=e130]: 94.3k
+        - generic [ref=e131]:
+          - generic [ref=e132]: 累计项目
+          - generic [ref=e133]: "564"
+        - generic [ref=e134]:
+          - generic [ref=e135]: 当前分类
+          - generic [ref=e136]: 全部
+      - generic [ref=e137]:
+        - article [ref=e163] [cursor=pointer]:
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]: Hmbown
+              - generic [ref=e167]: /
+              - generic [ref=e168]: DeepSeek-TUI
+            - link [ref=e170]:
+              - /url: https://github.com/Hmbown/DeepSeek-TUI
+          - paragraph [ref=e171]: Coding agent for DeepSeek models that runs in your terminal
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - generic [ref=e176]: Rust
+              - generic [ref=e177]:
+                - img [ref=e178]
+                - generic [ref=e180]: "67"
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - img [ref=e183]
+                - generic [ref=e186]: +22.0k
+              - generic [ref=e187]:
+                - img [ref=e188]
+                - generic [ref=e190]: 25.0k
+              - generic [ref=e191]:
+                - img [ref=e192]
+                - generic [ref=e197]: 2.1k
+          - generic [ref=e198]: "#1"
+        - article [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: mattpocock
+              - generic [ref=e203]: /
+              - generic [ref=e204]: skills
+            - link [ref=e206]:
+              - /url: https://github.com/mattpocock/skills
+          - paragraph [ref=e207]: Skills for Real Engineers. Straight from my .claude directory.
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e212]: Shell
+              - generic [ref=e213]:
+                - img [ref=e214]
+                - generic [ref=e216]: "33"
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - img [ref=e219]
+                - generic [ref=e222]: +12.7k
+              - generic [ref=e223]:
+                - img [ref=e224]
+                - generic [ref=e226]: 71.4k
+              - generic [ref=e227]:
+                - img [ref=e228]
+                - generic [ref=e233]: 6.2k
+        - article [ref=e234] [cursor=pointer]:
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - generic [ref=e237]: ruvnet
+              - generic [ref=e238]: /
+              - generic [ref=e239]: ruflo
+            - link [ref=e241]:
+              - /url: https://github.com/ruvnet/ruflo
+          - paragraph [ref=e242]: 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration
+          - generic [ref=e243]:
+            - generic [ref=e244]: agentic-ai
+            - generic [ref=e245]: agentic-framework
+            - generic [ref=e246]: agentic-rag
+            - generic [ref=e247]: agentic-workflow
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - generic [ref=e252]: TypeScript
+              - generic [ref=e253]:
+                - img [ref=e254]
+                - generic [ref=e256]: "100"
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - img [ref=e259]
+                - generic [ref=e262]: +10.8k
+              - generic [ref=e263]:
+                - img [ref=e264]
+                - generic [ref=e266]: 48.9k
+              - generic [ref=e267]:
+                - img [ref=e268]
+                - generic [ref=e273]: 5.4k
+          - generic [ref=e274]: "#3"
+        - article [ref=e275] [cursor=pointer]:
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - generic [ref=e278]: addyosmani
+              - generic [ref=e279]: /
+              - generic [ref=e280]: agent-skills
+            - link [ref=e282]:
+              - /url: https://github.com/addyosmani/agent-skills
+          - paragraph [ref=e283]: Production-grade engineering skills for AI coding agents.
+          - generic [ref=e284]:
+            - generic [ref=e285]:
+              - generic [ref=e288]: Shell
+              - generic [ref=e289]:
+                - img [ref=e290]
+                - generic [ref=e292]: "67"
+            - generic [ref=e293]:
+              - generic [ref=e294]:
+                - img [ref=e295]
+                - generic [ref=e298]: +10.7k
+              - generic [ref=e299]:
+                - img [ref=e300]
+                - generic [ref=e302]: 39.3k
+              - generic [ref=e303]:
+                - img [ref=e304]
+                - generic [ref=e309]: 4.3k
+        - article [ref=e310] [cursor=pointer]:
+          - generic [ref=e311]:
+            - generic [ref=e312]:
+              - generic [ref=e313]: TauricResearch
+              - generic [ref=e314]: /
+              - generic [ref=e315]: TradingAgents
+            - link [ref=e317]:
+              - /url: https://github.com/TauricResearch/TradingAgents
+          - paragraph [ref=e318]: "TradingAgents: Multi-Agents LLM Financial Trading Framework"
+          - generic [ref=e319]:
+            - generic [ref=e320]: agent
+            - generic [ref=e321]: finance
+            - generic [ref=e322]: llm
+            - generic [ref=e323]: multiagent
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - generic [ref=e328]: Python
+              - generic [ref=e329]:
+                - img [ref=e330]
+                - generic [ref=e332]: "67"
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - img [ref=e335]
+                - generic [ref=e338]: +8.9k
+              - generic [ref=e339]:
+                - img [ref=e340]
+                - generic [ref=e342]: 73.7k
+              - generic [ref=e343]:
+                - img [ref=e344]
+                - generic [ref=e349]: 14.4k
+          - generic [ref=e350]: "#8"
+        - article [ref=e351] [cursor=pointer]:
+          - generic [ref=e352]:
+            - generic [ref=e353]:
+              - generic [ref=e354]: AIDC-AI
+              - generic [ref=e355]: /
+              - generic [ref=e356]: Pixelle-Video
+            - link [ref=e358]:
+              - /url: https://github.com/AIDC-AI/Pixelle-Video
+          - paragraph [ref=e359]: 🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine
+          - generic [ref=e360]:
+            - generic [ref=e361]: aigc
+            - generic [ref=e362]: comfyui
+            - generic [ref=e363]: image-generation
+            - generic [ref=e364]: tts
+          - generic [ref=e365]:
+            - generic [ref=e366]:
+              - generic [ref=e369]: Python
+              - generic [ref=e370]:
+                - img [ref=e371]
+                - generic [ref=e373]: "30"
+            - generic [ref=e374]:
+              - generic [ref=e375]:
+                - img [ref=e376]
+                - generic [ref=e379]: +5.0k
+              - generic [ref=e380]:
+                - img [ref=e381]
+                - generic [ref=e383]: 15.1k
+              - generic [ref=e384]:
+                - img [ref=e385]
+                - generic [ref=e390]: 2.2k
+        - article [ref=e391] [cursor=pointer]:
+          - generic [ref=e392]:
+            - generic [ref=e393]:
+              - generic [ref=e394]: VectifyAI
+              - generic [ref=e395]: /
+              - generic [ref=e396]: PageIndex
+            - link [ref=e398]:
+              - /url: https://github.com/VectifyAI/PageIndex
+          - paragraph [ref=e399]: "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG"
+          - generic [ref=e400]:
+            - generic [ref=e401]: agentic-ai
+            - generic [ref=e402]: agents
+            - generic [ref=e403]: ai
+            - generic [ref=e404]: ai-agents
+          - generic [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e409]: Python
+              - generic [ref=e410]:
+                - img [ref=e411]
+                - generic [ref=e413]: "67"
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - img [ref=e416]
+                - generic [ref=e419]: +4.3k
+              - generic [ref=e420]:
+                - img [ref=e421]
+                - generic [ref=e423]: 30.6k
+              - generic [ref=e424]:
+                - img [ref=e425]
+                - generic [ref=e430]: 2.6k
+        - article [ref=e431] [cursor=pointer]:
+          - generic [ref=e432]:
+            - generic [ref=e433]:
+              - generic [ref=e434]: virattt
+              - generic [ref=e435]: /
+              - generic [ref=e436]: dexter
+            - link [ref=e438]:
+              - /url: https://github.com/virattt/dexter
+          - paragraph [ref=e439]: An autonomous agent for deep financial research
+          - generic [ref=e440]:
+            - generic [ref=e441]:
+              - generic [ref=e444]: TypeScript
+              - generic [ref=e445]:
+                - img [ref=e446]
+                - generic [ref=e448]: "33"
+            - generic [ref=e449]:
+              - generic [ref=e450]:
+                - img [ref=e451]
+                - generic [ref=e454]: +2.7k
+              - generic [ref=e455]:
+                - img [ref=e456]
+                - generic [ref=e458]: 25.3k
+              - generic [ref=e459]:
+                - img [ref=e460]
+                - generic [ref=e465]: 3.1k
+          - generic [ref=e466]: "#10"
+        - article [ref=e467] [cursor=pointer]:
+          - generic [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e470]: LearningCircuit
+              - generic [ref=e471]: /
+              - generic [ref=e472]: local-deep-research
+            - link [ref=e474]:
+              - /url: https://github.com/LearningCircuit/local-deep-research
+          - paragraph [ref=e475]: ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.
+          - generic [ref=e476]:
+            - generic [ref=e477]: academia
+            - generic [ref=e478]: anthropic
+            - generic [ref=e479]: arxiv
+            - generic [ref=e480]: brave
+          - generic [ref=e481]:
+            - generic [ref=e482]:
+              - generic [ref=e485]: Python
+              - generic [ref=e486]:
+                - img [ref=e487]
+                - generic [ref=e489]: "67"
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - img [ref=e492]
+                - generic [ref=e495]: +2.5k
+              - generic [ref=e496]:
+                - img [ref=e497]
+                - generic [ref=e499]: 7.2k
+              - generic [ref=e500]:
+                - img [ref=e501]
+                - generic [ref=e506]: "634"
+          - generic [ref=e507]: "#5"
+        - article [ref=e508] [cursor=pointer]:
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - generic [ref=e511]: 1jehuang
+              - generic [ref=e512]: /
+              - generic [ref=e513]: jcode
+            - link [ref=e515]:
+              - /url: https://github.com/1jehuang/jcode
+          - paragraph [ref=e516]: Coding Agent Harness
+          - generic [ref=e517]:
+            - generic [ref=e518]:
+              - generic [ref=e521]: Rust
+              - generic [ref=e522]:
+                - img [ref=e523]
+                - generic [ref=e525]: "33"
+            - generic [ref=e526]:
+              - generic [ref=e527]:
+                - img [ref=e528]
+                - generic [ref=e531]: +2.3k
+              - generic [ref=e532]:
+                - img [ref=e533]
+                - generic [ref=e535]: 5.7k
+              - generic [ref=e536]:
+                - img [ref=e537]
+                - generic [ref=e542]: "585"
+        - article [ref=e543] [cursor=pointer]:
+          - generic [ref=e544]:
+            - generic [ref=e545]:
+              - generic [ref=e546]: cocoindex-io
+              - generic [ref=e547]: /
+              - generic [ref=e548]: cocoindex
+            - link [ref=e550]:
+              - /url: https://github.com/cocoindex-io/cocoindex
+          - paragraph [ref=e551]: Incremental engine for long horizon agents 🌟 Star if you like it!
+          - generic [ref=e552]:
+            - generic [ref=e553]: agentic-data-framework
+            - generic [ref=e554]: ai
+            - generic [ref=e555]: ai-agents
+            - generic [ref=e556]: change-data-capture
+          - generic [ref=e557]:
+            - generic [ref=e558]:
+              - generic [ref=e561]: Python
+              - generic [ref=e562]:
+                - img [ref=e563]
+                - generic [ref=e565]: "33"
+            - generic [ref=e566]:
+              - generic [ref=e567]:
+                - img [ref=e568]
+                - generic [ref=e571]: +1.8k
+              - generic [ref=e572]:
+                - img [ref=e573]
+                - generic [ref=e575]: 9.6k
+              - generic [ref=e576]:
+                - img [ref=e577]
+                - generic [ref=e582]: "736"
+        - article [ref=e583] [cursor=pointer]:
+          - generic [ref=e584]:
+            - generic [ref=e585]:
+              - generic [ref=e586]: bwya77
+              - generic [ref=e587]: /
+              - generic [ref=e588]: vscode-dark-islands
+            - link [ref=e590]:
+              - /url: https://github.com/bwya77/vscode-dark-islands
+          - paragraph [ref=e591]: VSCode theme based off the easemate IDE and Jetbrains islands theme
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - generic [ref=e596]: PowerShell
+              - generic [ref=e597]:
+                - img [ref=e598]
+                - generic [ref=e600]: "30"
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - img [ref=e603]
+                - generic [ref=e606]: +1.6k
+              - generic [ref=e607]:
+                - img [ref=e608]
+                - generic [ref=e610]: 8.4k
+              - generic [ref=e611]:
+                - img [ref=e612]
+                - generic [ref=e617]: "263"
+          - generic [ref=e618]: "#9"
+        - article [ref=e619] [cursor=pointer]:
+          - generic [ref=e620]:
+            - generic [ref=e621]:
+              - generic [ref=e622]: NousResearch
+              - generic [ref=e623]: /
+              - generic [ref=e624]: hermes-agent
+            - link [ref=e626]:
+              - /url: https://github.com/NousResearch/hermes-agent
+          - paragraph [ref=e627]: The agent that grows with you
+          - generic [ref=e628]:
+            - generic [ref=e629]: ai
+            - generic [ref=e630]: ai-agent
+            - generic [ref=e631]: ai-agents
+            - generic [ref=e632]: anthropic
+          - generic [ref=e633]:
+            - generic [ref=e634]:
+              - generic [ref=e637]: Python
+              - generic [ref=e638]:
+                - img [ref=e639]
+                - generic [ref=e641]: "33"
+            - generic [ref=e642]:
+              - generic [ref=e643]:
+                - img [ref=e644]
+                - generic [ref=e647]: +1.5k
+              - generic [ref=e648]:
+                - img [ref=e649]
+                - generic [ref=e651]: 144.2k
+              - generic [ref=e652]:
+                - img [ref=e653]
+                - generic [ref=e658]: 22.5k
+        - article [ref=e659] [cursor=pointer]:
+          - generic [ref=e660]:
+            - generic [ref=e661]:
+              - generic [ref=e662]: InsForge
+              - generic [ref=e663]: /
+              - generic [ref=e664]: InsForge
+            - link [ref=e666]:
+              - /url: https://github.com/InsForge/InsForge
+          - paragraph [ref=e667]: The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.
+          - generic [ref=e668]:
+            - generic [ref=e669]:
+              - generic [ref=e672]: TypeScript
+              - generic [ref=e673]:
+                - img [ref=e674]
+                - generic [ref=e676]: "100"
+            - generic [ref=e677]:
+              - generic [ref=e678]:
+                - img [ref=e679]
+                - generic [ref=e682]: +1.4k
+              - generic [ref=e683]:
+                - img [ref=e684]
+                - generic [ref=e686]: 9.4k
+              - generic [ref=e687]:
+                - img [ref=e688]
+                - generic [ref=e693]: "780"
+        - article [ref=e694] [cursor=pointer]:
+          - generic [ref=e695]:
+            - generic [ref=e696]:
+              - generic [ref=e697]: bytedance
+              - generic [ref=e698]: /
+              - generic [ref=e699]: UI-TARS-desktop
+            - link [ref=e701]:
+              - /url: https://github.com/bytedance/UI-TARS-desktop
+          - paragraph [ref=e702]: "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra"
+          - generic [ref=e703]:
+            - generic [ref=e704]: agent
+            - generic [ref=e705]: agent-tars
+            - generic [ref=e706]: browser-use
+            - generic [ref=e707]: computer-use
+          - generic [ref=e708]:
+            - generic [ref=e709]:
+              - generic [ref=e712]: TypeScript
+              - generic [ref=e713]:
+                - img [ref=e714]
+                - generic [ref=e716]: "67"
+            - generic [ref=e717]:
+              - generic [ref=e718]:
+                - img [ref=e719]
+                - generic [ref=e722]: "+956"
+              - generic [ref=e723]:
+                - img [ref=e724]
+                - generic [ref=e726]: 32.8k
+              - generic [ref=e727]:
+                - img [ref=e728]
+                - generic [ref=e733]: 3.3k
+          - generic [ref=e734]: "#1"
+        - article [ref=e735] [cursor=pointer]:
+          - generic [ref=e736]:
+            - generic [ref=e737]:
+              - generic [ref=e738]: decolua
+              - generic [ref=e739]: /
+              - generic [ref=e740]: 9router
+            - link [ref=e742]:
+              - /url: https://github.com/decolua/9router
+          - paragraph [ref=e743]: Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.
+          - generic [ref=e744]:
+            - generic [ref=e745]:
+              - generic [ref=e748]: JavaScript
+              - generic [ref=e749]:
+                - img [ref=e750]
+                - generic [ref=e752]: "100"
+            - generic [ref=e753]:
+              - generic [ref=e754]:
+                - img [ref=e755]
+                - generic [ref=e758]: "+942"
+              - generic [ref=e759]:
+                - img [ref=e760]
+                - generic [ref=e762]: 8.0k
+              - generic [ref=e763]:
+                - img [ref=e764]
+                - generic [ref=e769]: 1.3k
+          - generic [ref=e770]: "#6"
+        - article [ref=e771] [cursor=pointer]:
+          - generic [ref=e772]:
+            - generic [ref=e773]:
+              - generic [ref=e774]: datawhalechina
+              - generic [ref=e775]: /
+              - generic [ref=e776]: easy-vibe
+            - link [ref=e778]:
+              - /url: https://github.com/datawhalechina/easy-vibe
+          - paragraph [ref=e779]: 💻 vibe coding 2026 | Your first modern Coding course for beginners to master step by step.
+          - generic [ref=e780]:
+            - generic [ref=e781]:
+              - generic [ref=e784]: JavaScript
+              - generic [ref=e785]:
+                - img [ref=e786]
+                - generic [ref=e788]: "33"
+            - generic [ref=e789]:
+              - generic [ref=e790]:
+                - img [ref=e791]
+                - generic [ref=e794]: "+808"
+              - generic [ref=e795]:
+                - img [ref=e796]
+                - generic [ref=e798]: 9.7k
+              - generic [ref=e799]:
+                - img [ref=e800]
+                - generic [ref=e805]: "930"
+          - generic [ref=e806]: "#5"
+        - article [ref=e807] [cursor=pointer]:
+          - generic [ref=e808]:
+            - generic [ref=e809]:
+              - generic [ref=e810]: PriorLabs
+              - generic [ref=e811]: /
+              - generic [ref=e812]: TabPFN
+            - link [ref=e814]:
+              - /url: https://github.com/PriorLabs/TabPFN
+          - paragraph [ref=e815]: "⚡ TabPFN: Foundation Model for Tabular Data ⚡"
+          - generic [ref=e816]:
+            - generic [ref=e817]:
+              - generic [ref=e820]: Python
+              - generic [ref=e821]:
+                - img [ref=e822]
+                - generic [ref=e824]: "33"
+            - generic [ref=e825]:
+              - generic [ref=e826]:
+                - img [ref=e827]
+                - generic [ref=e830]: "+748"
+              - generic [ref=e831]:
+                - img [ref=e832]
+                - generic [ref=e834]: 6.9k
+              - generic [ref=e835]:
+                - img [ref=e836]
+                - generic [ref=e841]: "683"
+        - article [ref=e842] [cursor=pointer]:
+          - generic [ref=e843]:
+            - generic [ref=e844]:
+              - generic [ref=e845]: rohitg00
+              - generic [ref=e846]: /
+              - generic [ref=e847]: agentmemory
+            - link [ref=e849]:
+              - /url: https://github.com/rohitg00/agentmemory
+          - paragraph [ref=e850]: "#1 Persistent memory for AI coding agents based on real-world benchmarks"
+          - generic [ref=e851]:
+            - generic [ref=e852]:
+              - generic [ref=e855]: TypeScript
+              - generic [ref=e856]:
+                - img [ref=e857]
+                - generic [ref=e859]: "100"
+            - generic [ref=e860]:
+              - generic [ref=e861]:
+                - img [ref=e862]
+                - generic [ref=e865]: "+655"
+              - generic [ref=e866]:
+                - img [ref=e867]
+                - generic [ref=e869]: 4.4k
+              - generic [ref=e870]:
+                - img [ref=e871]
+                - generic [ref=e876]: "417"
+        - article [ref=e877] [cursor=pointer]:
+          - generic [ref=e878]:
+            - generic [ref=e879]:
+              - generic [ref=e880]: tinyhumansai
+              - generic [ref=e881]: /
+              - generic [ref=e882]: openhuman
+            - link [ref=e884]:
+              - /url: https://github.com/tinyhumansai/openhuman
+          - paragraph [ref=e885]: Your Personal AI super intelligence. Private, Simple and extremely powerful.
+          - generic [ref=e886]:
+            - generic [ref=e887]:
+              - generic [ref=e890]: Rust
+              - generic [ref=e891]:
+                - img [ref=e892]
+                - generic [ref=e894]: "30"
+            - generic [ref=e895]:
+              - generic [ref=e896]:
+                - img [ref=e897]
+                - generic [ref=e900]: "+501"
+              - generic [ref=e901]:
+                - img [ref=e902]
+                - generic [ref=e904]: 1.1k
+              - generic [ref=e905]:
+                - img [ref=e906]
+                - generic [ref=e911]: "155"
+          - generic [ref=e912]: "#7"
+  - generic [ref=e143]:
+    - generic "Toggle devtools panel" [ref=e144] [cursor=pointer]:
+      - img [ref=e145]
+    - generic "Toggle Component Inspector" [ref=e914] [cursor=pointer]:
+      - img [ref=e915]

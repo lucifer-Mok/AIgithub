@@ -1,0 +1,22 @@
+[     471ms] [WARNING] [Vue warn]: Missing required prop: "activeView" 
+  at <AppSidebar > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< undefined > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=b93762a9:1752
+[     471ms] [WARNING] [Vue warn]: Missing required prop: "trackCount" 
+  at <AppSidebar > 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< undefined > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=b93762a9:1752
+[     477ms] [LOG] 🍍 "app" store installed 🆕 @ http://localhost:5173/node_modules/.vite/deps/pinia.js?v=01275b44:3788
+[     561ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://localhost:5173/api/categories:0
+[     562ms] [WARNING] [Vue warn]: Unhandled error during execution of mounted hook 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView > 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-CMLZRQMs.js?v=b93762a9:1752
+[     577ms] AxiosError: Request failed with status code 502
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=e9557ce2:1725:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=e9557ce2:2077:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=e9557ce2:2780:37)
+    at async Proxy.loadCategories (http://localhost:5173/src/stores/app.ts:20:15)
+    at async http://localhost:5173/src/views/HomeView.vue?t=1778547674203:70:4

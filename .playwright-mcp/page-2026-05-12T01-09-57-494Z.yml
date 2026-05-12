@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e10]: AI Radar
+        - generic [ref=e11]: β
+      - generic [ref=e12]:
+        - generic [ref=e13]: 日期
+        - generic [ref=e14] [cursor=pointer]:
+          - text: 今天
+          - img [ref=e15]
+      - generic [ref=e17]:
+        - generic [ref=e18]: 排序
+        - generic [ref=e19]:
+          - button "今日热度" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - text: 今日热度
+          - button "总星数" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - text: 总星数
+          - button "AI 相关度" [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+            - text: AI 相关度
+      - generic [ref=e30]:
+        - generic [ref=e31]: 分类
+        - navigation [ref=e32]:
+          - button "🌐 全部 0" [ref=e33] [cursor=pointer]:
+            - generic [ref=e34]: 🌐
+            - generic [ref=e35]: 全部
+            - generic [ref=e36]: "0"
+          - button "🧠 大语言模型 0" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: 🧠
+            - generic [ref=e39]: 大语言模型
+            - generic [ref=e40]: "0"
+          - button "🔍 RAG检索增强 0" [ref=e41] [cursor=pointer]:
+            - generic [ref=e42]: 🔍
+            - generic [ref=e43]: RAG检索增强
+            - generic [ref=e44]: "0"
+          - button "🤖 AI Agent 0" [ref=e45] [cursor=pointer]:
+            - generic [ref=e46]: 🤖
+            - generic [ref=e47]: AI Agent
+            - generic [ref=e48]: "0"
+          - button "🔌 MCP协议 0" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: 🔌
+            - generic [ref=e51]: MCP协议
+            - generic [ref=e52]: "0"
+          - button "🎨 图像视觉 0" [ref=e53] [cursor=pointer]:
+            - generic [ref=e54]: 🎨
+            - generic [ref=e55]: 图像视觉
+            - generic [ref=e56]: "0"
+          - button "🎵 语音音频 0" [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: 🎵
+            - generic [ref=e59]: 语音音频
+            - generic [ref=e60]: "0"
+          - button "⚙️ 模型训练 0" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]: ⚙️
+            - generic [ref=e63]: 模型训练
+            - generic [ref=e64]: "0"
+          - button "⚡ 模型推理 0" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]: ⚡
+            - generic [ref=e67]: 模型推理
+            - generic [ref=e68]: "0"
+          - button "🛠️ AI工具链 0" [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]: 🛠️
+            - generic [ref=e71]: AI工具链
+            - generic [ref=e72]: "0"
+          - button "📊 数据集 0" [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]: 📊
+            - generic [ref=e75]: 数据集
+            - generic [ref=e76]: "0"
+          - button "🛡️ AI安全 0" [ref=e77] [cursor=pointer]:
+            - generic [ref=e78]: 🛡️
+            - generic [ref=e79]: AI安全
+            - generic [ref=e80]: "0"
+          - button "🦾 具身智能 0" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: 🦾
+            - generic [ref=e83]: 具身智能
+            - generic [ref=e84]: "0"
+          - button "💻 代码生成 0" [ref=e85] [cursor=pointer]:
+            - generic [ref=e86]: 💻
+            - generic [ref=e87]: 代码生成
+            - generic [ref=e88]: "0"
+          - button "✨ 其他AI 0" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: ✨
+            - generic [ref=e91]: 其他AI
+            - generic [ref=e92]: "0"
+      - button "自定义追踪" [ref=e94] [cursor=pointer]:
+        - img [ref=e95]
+        - text: 自定义追踪
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 今日收录
+          - generic [ref=e100]: "0"
+        - generic [ref=e101]:
+          - generic [ref=e102]: 总计
+          - generic [ref=e103]: "564"
+        - generic [ref=e104]:
+          - generic [ref=e105]: 今日 ⭐
+          - generic [ref=e106]: "0"
+    - main [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - heading "🌐 全部 AI 项目" [level=1] [ref=e110]
+          - generic [ref=e111]: 0 个项目
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - img [ref=e114]
+            - textbox "搜索项目..." [ref=e117]
+          - button "立即抓取" [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+            - text: 立即抓取
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - generic [ref=e126]: 今日收录
+          - generic [ref=e127]: "0"
+        - generic [ref=e128]:
+          - generic [ref=e129]: 今日 ⭐ 增量
+          - generic [ref=e130]: "0"
+        - generic [ref=e131]:
+          - generic [ref=e132]: 累计项目
+          - generic [ref=e133]: "564"
+        - generic [ref=e134]:
+          - generic [ref=e135]: 当前分类
+          - generic [ref=e136]: 全部
+      - generic [ref=e138]:
+        - generic [ref=e139]: 🔭
+        - generic [ref=e140]: 暂无数据
+        - generic [ref=e141]: 尝试切换分类或触发一次抓取
+  - generic [ref=e143]:
+    - generic "Toggle devtools panel" [ref=e144] [cursor=pointer]:
+      - img [ref=e145]
+    - generic "Toggle Component Inspector" [ref=e150] [cursor=pointer]:
+      - img [ref=e151]

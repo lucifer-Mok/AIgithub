@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e10]: AI Radar
+        - generic [ref=e11]: β
+      - generic [ref=e12]:
+        - generic [ref=e13]: 日期
+        - generic [ref=e14] [cursor=pointer]:
+          - text: 今天
+          - img [ref=e15]
+      - generic [ref=e17]:
+        - generic [ref=e18]: 排序
+        - generic [ref=e19]:
+          - button "今日热度" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - text: 今日热度
+          - button "总星数" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - text: 总星数
+          - button "AI 相关度" [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+            - text: AI 相关度
+      - generic [ref=e30]:
+        - generic [ref=e31]: 分类
+        - navigation [ref=e32]:
+          - button "🌐 全部 0" [ref=e33] [cursor=pointer]:
+            - generic [ref=e34]: 🌐
+            - generic [ref=e35]: 全部
+            - generic [ref=e36]: "0"
+      - button "自定义追踪" [ref=e38] [cursor=pointer]:
+        - img [ref=e39]
+        - text: 自定义追踪
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: 今日收录
+          - generic [ref=e44]: "0"
+        - generic [ref=e45]:
+          - generic [ref=e46]: 总计
+          - generic [ref=e47]: "0"
+        - generic [ref=e48]:
+          - generic [ref=e49]: 今日 ⭐
+          - generic [ref=e50]: "0"
+    - main [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "🌐 全部 AI 项目" [level=1] [ref=e54]
+          - generic [ref=e55]: 0 个项目
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - img [ref=e58]
+            - textbox "搜索项目..." [ref=e61]
+          - button "立即抓取" [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
+            - text: 立即抓取
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 今日收录
+          - generic [ref=e71]: —
+        - generic [ref=e72]:
+          - generic [ref=e73]: 今日 ⭐ 增量
+          - generic [ref=e74]: "0"
+        - generic [ref=e75]:
+          - generic [ref=e76]: 累计项目
+          - generic [ref=e77]: —
+        - generic [ref=e78]:
+          - generic [ref=e79]: 当前分类
+          - generic [ref=e80]: 全部
+      - generic [ref=e82]:
+        - generic [ref=e83]: 🔭
+        - generic [ref=e84]: 暂无数据
+        - generic [ref=e85]: 尝试切换分类或触发一次抓取
+  - generic [ref=e87]:
+    - generic "Toggle devtools panel" [ref=e88] [cursor=pointer]:
+      - img [ref=e89]
+    - generic "Toggle Component Inspector" [ref=e94] [cursor=pointer]:
+      - img [ref=e95]
