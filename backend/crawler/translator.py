@@ -270,7 +270,7 @@ async def batch_process(
                         result["has_chinese_readme"] = 1
                         result["chinese_readme_path"] = cn_path
                         results[full_name] = result
-                        logger.info(f"Summarized from Chinese README: {full_name}")
+                        logger.debug(f"Summarized from Chinese README: {full_name}")
                         return
 
             # ── 策略 2：翻译英文描述 ────────────────────────────────
@@ -377,7 +377,6 @@ async def batch_process_free(
                     "summary_zh": translated,
                     "desc_hash": new_hash,
                 }
-                logger.info(f"Free translated: {full_name}")
             else:
                 skipped_failed += 1
                 logger.info(f"Free translation failed (rate-limit/unavailable): {full_name}")
