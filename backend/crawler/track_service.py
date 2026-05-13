@@ -158,7 +158,7 @@ async def add_repo_track(
     for kw in keywords:
         added = _upsert_track(
             db, "keyword", kw,
-            min_stars=100,  # 关键词追踪用固定低门槛，避免漏掉相关项目
+            min_stars=1000,
             source_repo=full_name,
             description=f"从 {full_name} 自动提取",
         )
@@ -169,7 +169,7 @@ async def add_repo_track(
     for topic in (repo_data.get("topics", []) or [])[:5]:
         added = _upsert_track(
             db, "topic", topic,
-            min_stars=100,
+            min_stars=1000,
             source_repo=full_name,
             description=f"从 {full_name} 自动提取",
         )
@@ -195,7 +195,7 @@ async def add_repo_track(
 async def add_keyword_track(
     db: Session,
     keyword: str,
-    min_stars: int = 100,
+    min_stars: int = 1000,
     description: str = "",
 ) -> dict:
     """手动添加关键词追踪"""
@@ -212,7 +212,7 @@ async def add_keyword_track(
 async def add_topic_track(
     db: Session,
     topic: str,
-    min_stars: int = 100,
+    min_stars: int = 1000,
     description: str = "",
 ) -> dict:
     """手动添加 topic 追踪"""
@@ -253,14 +253,14 @@ async def run_custom_tracks(db: Session, client: GitHubClient) -> dict:
             elif track.track_type == "keyword":
                 repos = await client.search_by_keyword(
                     track.value,
-                    min_stars=track.min_stars or 100,
+                    min_stars=track.min_stars or 1000,
                     per_page=20,
                 )
 
             elif track.track_type == "topic":
                 repos = await client.search_ai_repos(
                     track.value,
-                    min_stars=track.min_stars or 100,
+                    min_stars=track.min_stars or 1000,
                     per_page=20,
                 )
 

@@ -24,16 +24,16 @@ INSERT IGNORE INTO ai_github.custom_tracks (track_type, value, min_stars, source
 ('repo', 'obra/superpowers', 0, 'obra/superpowers', 'agentic skills framework', 1),
 ('repo', 'nexu-io/open-design', 0, 'nexu-io/open-design', 'Claude Design 开源替代品', 1),
 -- 关键词追踪
-('keyword', 'agentic skills framework', 100, 'obra/superpowers', '从 obra/superpowers 自动提取', 1),
-('keyword', 'open source claude alternative', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('keyword', 'agent-skills', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('keyword', 'ai-agents', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('keyword', 'ai-design', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('keyword', 'byok', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('keyword', 'claude', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'agentic skills framework', 1000, 'obra/superpowers', '从 obra/superpowers 自动提取', 1),
+('keyword', 'open source claude alternative', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'agent-skills', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'ai-agents', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'ai-design', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'byok', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('keyword', 'claude', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
 -- Topic 追踪
-('topic', 'agent-skills', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('topic', 'ai-agents', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('topic', 'ai-design', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('topic', 'byok', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
-('topic', 'claude', 100, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1);
+('topic', 'agent-skills', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('topic', 'ai-agents', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('topic', 'ai-design', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('topic', 'byok', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1),
+('topic', 'claude', 1000, 'nexu-io/open-design', '从 nexu-io/open-design 自动提取', 1);

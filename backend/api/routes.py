@@ -415,12 +415,12 @@ class AddRepoTrackRequest(BaseModel):
 
 class AddKeywordTrackRequest(BaseModel):
     keyword: str
-    min_stars: int = 100
+    min_stars: int = 1000
     description: str = ""
 
 class AddTopicTrackRequest(BaseModel):
     topic: str
-    min_stars: int = 100
+    min_stars: int = 1000
     description: str = ""
 
 
