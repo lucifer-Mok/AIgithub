@@ -95,6 +95,10 @@ export const api = {
   searchRepos: (q: string, page = 1, page_size = 20) =>
     http.get<RepoListResponse>('/repos/search', { params: { q, page, page_size } }),
 
+  // 按需翻译
+  translateRepo: (fullName: string, engine: 'auto' | 'deepseek' | 'google' = 'auto') =>
+    http.post(`/repos/${fullName}/translate`, null, { params: { engine } }),
+
   // 系统配置
   getConfig: () => http.get('/config'),
   updateConfig: (key: string, value: string) =>

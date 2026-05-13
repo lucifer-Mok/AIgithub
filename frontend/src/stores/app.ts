@@ -15,7 +15,8 @@ export const useAppStore = defineStore('app', () => {
   const order = ref<'asc' | 'desc'>('desc')
   const page = ref(1)
   const pageSize = ref(20)
-  const lang = ref<'zh' | 'en'>('zh')  // 语言切换
+  const lang = ref<'zh' | 'en'>('zh')
+  const hasDeepSeek = ref(false)  // 是否配置了 DeepSeek Key，全局只查一次
 
   // 计算属性
   const currentCategory = computed(() =>
@@ -26,6 +27,11 @@ export const useAppStore = defineStore('app', () => {
   async function loadCategories() {
     const res = await api.getCategories()
     categories.value = res.data
+    // 同时检查 DeepSeek 配置
+    try {
+      const cfg = await api.getConfig()
+      hasDeepSeek.value = (cfg.data as any).DEEPSEEK_API_KEY?.is_set ?? false
+    } catch { /* ignore */ }
   }
 
   // 加载概览，后端会自动回退到最近有数据的日期
@@ -90,7 +96,7 @@ export const useAppStore = defineStore('app', () => {
 
   return {
     categories, overview, repos, total, loading,
-    selectedCategory, selectedDate, sortBy, order, page, pageSize, lang,
+    selectedCategory, selectedDate, sortBy, order, page, pageSize, lang, hasDeepSeek,
     currentCategory,
     loadCategories, loadOverview, loadRepos, loadMore,
     setCategory, setSort,

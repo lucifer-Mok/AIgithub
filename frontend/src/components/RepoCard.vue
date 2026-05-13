@@ -1,5 +1,20 @@
 <template>
-  <article class="repo-card animate-fade-in-up" @click="$emit('click', repo)">
+  <article class="repo-card animate-fade-in-up" @click="handleCardClick">
+    <!-- 翻译按钮（没有中文摘要时显示，绝对定位不参与卡片点击） -->
+    <div v-if="!repo.summary_zh && !repo.name_zh && store.lang === 'zh' && !isDescChinese"
+         class="translate-overlay"
+         @click.stop>
+      <button class="translate-btn" :class="{ loading: translating }"
+        @click.stop.prevent="doTranslate('auto')">
+        <span v-if="translating">翻译中...</span>
+        <span v-else>🌐 翻译</span>
+      </button>
+      <button class="translate-btn-sm" @click.stop.prevent="doTranslate('google')"
+        :disabled="translating" title="Google 免费翻译">G</button>
+      <button v-if="hasDeepSeek" class="translate-btn-sm accent"
+        @click.stop.prevent="doTranslate('deepseek')"
+        :disabled="translating" title="DeepSeek 高质量翻译">D</button>
+    </div>
     <!-- 头部 -->
     <div class="card-header">
       <div class="repo-meta">
@@ -66,9 +81,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { StarIcon, TrendingUpIcon, ZapIcon, GitForkIcon } from 'lucide-vue-next'
 import type { Repo } from '@/api'
+import { api } from '@/api'
 import { useAppStore } from '@/stores/app'
 
 const GithubIcon = {
@@ -87,9 +103,47 @@ const CAT_NAMES: Record<string, string> = {
 }
 
 const props = defineProps<{ repo: Repo }>()
-defineEmits<{ click: [repo: Repo] }>()
-
+const emit = defineEmits<{ click: [repo: Repo] }>()
 const store = useAppStore()
+const translating = ref(false)
+const isTranslateAction = ref(false)
+
+// 从 store 读取，全局只查一次
+const hasDeepSeek = computed(() => store.hasDeepSeek)
+
+// 描述是否已经是中文（中文字符占比 > 20%）
+const isDescChinese = computed(() => {
+  const text = props.repo.description || ''
+  if (!text) return false
+  const cjk = (text.match(/[\u4e00-\u9fff\u3400-\u4dbf]/g) || []).length
+  return cjk / text.length >= 0.2
+})
+
+function handleCardClick(e: MouseEvent) {
+  // 如果点击的是按钮或翻译区域，不触发详情
+  const target = e.target as HTMLElement
+  if (target.closest('.translate-bar') || target.closest('button') || target.closest('a')) return
+  emit('click', props.repo)
+}
+
+async function doTranslate(engine: 'auto' | 'deepseek' | 'google') {
+  if (translating.value) return
+  translating.value = true
+  try {
+    const res = await api.translateRepo(props.repo.full_name, engine)
+    const data = res.data as any
+    if (data.success) {
+      props.repo.summary_zh = data.summary_zh || props.repo.summary_zh
+      if (data.name_zh) props.repo.name_zh = data.name_zh
+      if (data.tags_zh) props.repo.tags_zh = data.tags_zh
+    }
+  } catch (e) {
+    console.error('Translation failed:', e)
+  } finally {
+    translating.value = false
+    setTimeout(() => { isTranslateAction.value = false }, 100)
+  }
+}
 
 // 根据语言显示名称和描述
 const displayName = computed(() =>
@@ -218,13 +272,52 @@ function getScoreClass(score: number) {
   font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.55;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: 400;
 }
+
+.translate-overlay {
+  position: absolute;
+  top: 8px;
+  right: 36px;  /* 避开右上角的 GitHub 链接按钮 */
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.repo-card:hover .translate-overlay { opacity: 1; }
+.translate-btn {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.translate-btn:hover { border-color: var(--accent); color: var(--accent); }
+.translate-btn.loading { opacity: 0.6; cursor: not-allowed; }
+.translate-btn-sm {
+  font-size: 10px; font-weight: 700;
+  width: 20px; height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center;
+}
+.translate-btn-sm:hover { border-color: var(--accent); color: var(--accent); }
+.translate-btn-sm.accent { border-color: rgba(79,70,229,0.3); color: var(--accent); background: var(--accent-glow); }
+.translate-btn-sm:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .repo-tags {
   display: flex;

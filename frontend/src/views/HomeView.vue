@@ -166,7 +166,6 @@ function formatNum(n: number) {
 function openDetail(repo: Repo) {
   selectedRepo.value = repo.full_name
 }
-
 async function triggerCrawl() {
   if (crawling.value) return
   crawling.value = true

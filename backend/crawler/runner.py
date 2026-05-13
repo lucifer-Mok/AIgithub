@@ -171,8 +171,10 @@ async def run_daily_crawl() -> dict:
 
         # ── 阶段 3：翻译（后台异步，不阻塞爬取完成）────────────────
         all_saved_names = list({
-            *[r.get("full_name") for r in trending_repos],
-            *api_saved_names,
+            fn for fn in (
+                *[r.get("full_name") for r in trending_repos],
+                *api_saved_names,
+            ) if fn  # 过滤掉 None 和空字符串
         })
         repos_for_translation = get_repos_needing_translation(db, all_saved_names)
         logger.info(f"  Translation candidates: {len(repos_for_translation)} repos")

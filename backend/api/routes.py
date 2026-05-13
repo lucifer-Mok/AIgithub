@@ -149,6 +149,67 @@ def search_repos(
     }
 
 
+@router.post("/repos/{full_name:path}/translate")
+async def translate_repo_on_demand(
+    full_name: str,
+    engine: str = Query("auto", description="翻译引擎: auto | deepseek | google"),
+    db: Session = Depends(get_db),
+):
+    """
+    按需翻译单个 repo
+    engine: auto=自动选择, deepseek=DeepSeek, google=Google免费翻译
+    """
+    from config import settings as cfg
+    from crawler.translator import translate_repo, batch_process_free, is_chinese
+    from crawler.storage import apply_translations
+
+    repo = db.query(Repo).filter(Repo.full_name == full_name).first()
+    if not repo:
+        raise HTTPException(404, "Repo not found")
+
+    description = repo.description or ""
+    if not description:
+        raise HTTPException(400, "No description to translate")
+
+    # 已是中文且有摘要，直接返回
+    if repo.summary_zh and is_chinese(repo.summary_zh):
+        return {"success": True, "summary_zh": repo.summary_zh, "cached": True}
+
+    # 选择翻译引擎
+    use_deepseek = (engine == "deepseek" or (engine == "auto" and cfg.deepseek_api_key))
+    use_google = (engine == "google" or (engine == "auto" and not cfg.deepseek_api_key))
+
+    if use_deepseek and cfg.deepseek_api_key:
+        result = await translate_repo(
+            repo_name=repo.repo_name,
+            description=description,
+            topics=repo.topics or [],
+            language=repo.language or "",
+        )
+        if result:
+            repo.name_zh = result.get("name_zh") or repo.name_zh
+            repo.summary_zh = result.get("summary_zh") or repo.summary_zh
+            repo.tags_zh = result.get("tags_zh") or repo.tags_zh
+            db.commit()
+            return {"success": True, "summary_zh": repo.summary_zh, "name_zh": repo.name_zh,
+                    "tags_zh": repo.tags_zh, "engine": "deepseek"}
+        raise HTTPException(500, "DeepSeek translation failed")
+
+    elif use_google:
+        from crawler.translator import _free_translate, compute_hash
+        import asyncio
+        loop = asyncio.get_event_loop()
+        translated = await loop.run_in_executor(None, _free_translate, description)
+        if translated and translated != description:
+            repo.summary_zh = translated
+            repo.desc_hash = compute_hash(description)
+            db.commit()
+            return {"success": True, "summary_zh": translated, "engine": "google"}
+        raise HTTPException(500, "Google translation failed")
+
+    raise HTTPException(400, "No translation engine available. Configure DEEPSEEK_API_KEY or use engine=google")
+
+
 @router.get("/repos/{full_name:path}")
 def get_repo(full_name: str, db: Session = Depends(get_db)):
     """获取单个 repo 详情及近 30 天趋势"""
