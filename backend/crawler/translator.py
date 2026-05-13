@@ -353,10 +353,10 @@ async def batch_process_free(
         async with semaphore:
             # 在线程池里跑同步翻译，避免阻塞事件循环
             try:
-                loop = asyncio.get_event_loop()
-                translated = await loop.run_in_executor(None, _free_translate, description)
-            except RuntimeError:
-                return  # 线程池已关闭，静默退出
+                translated = await asyncio.to_thread(_free_translate, description)
+            except Exception as e:
+                logger.warning(f"Free translation executor error for {full_name}: {e}")
+                return
 
             if translated and translated != description:
                 results[full_name] = {
@@ -364,6 +364,8 @@ async def batch_process_free(
                     "desc_hash": new_hash,
                 }
                 logger.debug(f"Free translated: {full_name}")
+            else:
+                logger.debug(f"Free translation unchanged, skipped: {full_name}")
 
             # 控制频率，避免被封
             await asyncio.sleep(0.3)
