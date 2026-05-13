@@ -318,7 +318,10 @@ def _free_translate(text: str) -> str:
     try:
         from deep_translator import GoogleTranslator
         result = GoogleTranslator(source="auto", target="zh-CN").translate(text[:500])
-        return result or text
+        if result and result != text:
+            return result
+        logger.warning(f"Free translation returned unchanged for: {text[:80]}...")
+        return text
     except Exception as e:
         logger.warning(f"Free translation failed: {e}")
         return text
@@ -336,18 +339,27 @@ async def batch_process_free(
     results = {}
     semaphore = asyncio.Semaphore(concurrency)
 
+    skipped_empty = 0
+    skipped_chinese = 0
+    skipped_unchanged = 0
+    skipped_failed = 0
+
     async def _translate_one(repo: dict):
+        nonlocal skipped_empty, skipped_chinese, skipped_unchanged, skipped_failed
         full_name = repo["full_name"]
         description = repo.get("description", "").strip()
 
         if not description:
+            skipped_empty += 1
             return
         # 已是中文，跳过
         if is_chinese(description):
+            skipped_chinese += 1
             return
         # 内容未变化，跳过
         new_hash = compute_hash(description)
         if repo.get("desc_hash") and repo["desc_hash"] == new_hash:
+            skipped_unchanged += 1
             return
 
         async with semaphore:
@@ -356,20 +368,27 @@ async def batch_process_free(
                 translated = await asyncio.to_thread(_free_translate, description)
             except Exception as e:
                 logger.warning(f"Free translation executor error for {full_name}: {e}")
+                skipped_failed += 1
                 return
 
-            if translated and translated != description:
+            # 结果需要是真正的中文才算翻译成功，防止 Google 限流返回原文
+            if translated and is_chinese(translated):
                 results[full_name] = {
-                    "summary_zh": translated,   # 存到 summary_zh 字段
+                    "summary_zh": translated,
                     "desc_hash": new_hash,
                 }
-                logger.debug(f"Free translated: {full_name}")
+                logger.info(f"Free translated: {full_name}")
             else:
-                logger.debug(f"Free translation unchanged, skipped: {full_name}")
+                skipped_failed += 1
+                logger.info(f"Free translation failed (rate-limit/unavailable): {full_name}")
 
             # 控制频率，避免被封
-            await asyncio.sleep(0.3)
+            await asyncio.sleep(0.5)
 
     await asyncio.gather(*[_translate_one(r) for r in repos])
-    logger.info(f"Free translated {len(results)}/{len(repos)} repos")
+    logger.info(
+        f"Free translation done: translated={len(results)}, "
+        f"skipped_empty={skipped_empty}, skipped_chinese={skipped_chinese}, "
+        f"skipped_unchanged={skipped_unchanged}, skipped_failed={skipped_failed}"
+    )
     return results
