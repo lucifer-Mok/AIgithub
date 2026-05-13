@@ -29,6 +29,7 @@
 
 ### 数据采集
 - **双轨爬取**：GitHub Trending 页面（今日热度）+ Search API（按 topic/关键词）
+- **并发请求**：Search API 并发执行，提升爬取效率
 - **30+ AI 分类关键词**：覆盖 LLM、RAG、Agent、MCP、图像视觉、语音音频等
 - **自定义追踪**：输入任意 GitHub URL 或 `owner/repo`，立即收录并自动提取关键词
 - **每日定时**：凌晨 2 点自动执行，无需人工干预
@@ -54,6 +55,13 @@
 | ✨ 其他AI | 其他 AI 相关项目 |
 
 ### 中文化
+
+#### 🤖 按需翻译
+- **单卡翻译**：悬停卡片右上角显示翻译按钮，按需翻译单个项目
+- **引擎选择**：支持 DeepSeek / Google / 自动选择翻译引擎
+- **后台异步**：翻译在后台执行，不阻塞界面交互
+
+#### 🌐 批量翻译
 - **DeepSeek 高质量翻译**：配置 API Key 后，自动生成中文项目名称、摘要、标签
 - **Google 免费翻译降级**：无 Key 时自动降级为 Google 翻译，保证基本可用
 - **智能缓存**：已翻译项目不重复消耗 token，内容变化时才重新翻译
@@ -77,6 +85,7 @@
 
 #### 📋 列表交互
 - **三种排序**：今日热度（Trending）/ 总星数 / AI 相关度
+- **升降序切换**：点击排序按钮切换升序/降序
 - **分类筛选**：左侧导航点击分类，数量实时联动
 - **全量搜索**：后端搜索，覆盖名称、描述、中文摘要
 - **无限滚动**：自动加载更多，滚动到底部无缝追加
@@ -111,9 +120,11 @@ AIgithub/
 │   │   ├── translator.py    # 翻译模块（DeepSeek / Google）
 │   │   ├── storage.py       # 数据库存储层
 │   │   ├── track_service.py # 自定义追踪服务
-│   │   └── runner.py        # 爬取主流程（4个阶段）
+│   │   └── runner.py        # 爬取主流程（并发 + 后台翻译）
 │   ├── config.py            # 配置管理
+│   ├── database.py          # SQLAlchemy 引擎与会话工厂
 │   ├── models.py            # SQLAlchemy 数据模型
+│   ├── init_data.sql        # 初始化数据（分类 + 追踪规则）
 │   ├── scheduler.py         # APScheduler 定时任务
 │   └── main.py              # FastAPI 应用入口
 └── frontend/                # Vue 3 前端
@@ -136,7 +147,7 @@ AIgithub/
 
 ### 环境要求
 - Python 3.12+
-- Node.js 18+
+- Node.js 20.19+ 或 22.12+
 - MySQL 8.0+
 
 ### 1. 克隆项目
@@ -190,6 +201,12 @@ CREATE DATABASE ai_github DEFAULT CHARACTER SET utf8mb4;
 
 然后启动后端，表结构会自动创建（通过 SQLAlchemy）。
 
+表创建后，执行 `init_data.sql` 植入 14 个分类和示例追踪规则：
+
+```bash
+mysql -u root -p ai_github < init_data.sql
+```
+
 ### 4. 启动后端
 
 ```bash
@@ -222,17 +239,24 @@ curl -X POST http://localhost:8000/api/crawl/trigger
 
 | 接口 | 说明 |
 |------|------|
-| `GET /api/repos` | 获取 repo 列表（支持分类、排序、分页） |
-| `GET /api/repos/search` | 全量搜索 |
-| `GET /api/repos/{full_name}` | 获取 repo 详情及趋势 |
+| `GET /api/repos` | 获取 repo 列表（支持分类、日期、排序、分页） |
+| `GET /api/repos/search` | 全量搜索（名称、描述、中文摘要） |
+| `GET /api/repos/{full_name}` | 获取 repo 详情及近 30 天趋势 |
+| `POST /api/repos/{full_name}/translate` | 按需翻译单个 repo |
 | `GET /api/stats/overview` | 首页概览统计 |
+| `GET /api/stats/history` | 近 N 天每日新增 repo 趋势 |
 | `GET /api/categories` | 获取所有分类 |
-| `POST /api/crawl/trigger` | 手动触发爬取 |
+| `POST /api/crawl/trigger` | 手动触发爬取（后台异步） |
+| `GET /api/crawl/logs` | 获取最近爬取日志 |
 | `GET /api/tracks` | 获取自定义追踪列表 |
 | `POST /api/tracks/repo` | 添加 repo 追踪 |
 | `POST /api/tracks/keyword` | 添加关键词追踪 |
-| `GET /api/config` | 获取系统配置 |
+| `POST /api/tracks/topic` | 添加 topic 追踪 |
+| `PATCH /api/tracks/{id}` | 更新追踪（启用/禁用、修改最低 Star） |
+| `DELETE /api/tracks/{id}` | 删除追踪 |
+| `GET /api/config` | 获取系统配置（密钥脱敏） |
 | `POST /api/config` | 更新配置（热加载） |
+| `DELETE /api/config/{key}` | 清除配置项 |
 | `GET /api/config/verify/github` | 验证 GitHub Token |
 
 ---
@@ -242,21 +266,21 @@ curl -X POST http://localhost:8000/api/crawl/trigger
 每次爬取分 4 个阶段：
 
 ```
-阶段 1：GitHub Trending（daily + weekly）
+阶段 1：GitHub Trending（daily + weekly，合并去重）
     ↓ 获取今日/本周热门项目，记录 stars_today
 
-阶段 2a：Search API（30+ AI topics）
+阶段 2a：Search API ~30 个 AI topics（并发 x3，Semaphore 控速）
     ↓ 按 topic 标签搜索，覆盖各 AI 细分领域
 
-阶段 2b：关键词全文搜索
+阶段 2b：关键词全文搜索（并发 x3）
     ↓ 搜索名称/描述，捕获没打 topic 标签的优质项目
 
 阶段 2c：自定义追踪
     ↓ 执行用户添加的 repo/keyword/topic 追踪规则
 
-阶段 3：翻译
-    ↓ DeepSeek（有 Key）或 Google 免费翻译（无 Key）
-    ↓ 智能跳过：已是中文 / 内容未变化
+阶段 3：翻译（后台异步，不阻塞爬取响应）
+    ↓ DeepSeek（有 Key，并发 x3）或 Google 免费翻译（并发 x5）
+    ↓ 智能跳过：已是中文 / 内容未变化（MD5 hash）
 ```
 
 ---
