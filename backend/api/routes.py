@@ -65,18 +65,36 @@ def list_repos(
             sort_col = desc(Repo.stars_total) if order == "desc" else Repo.stars_total
         else:
             sort_col = desc(Repo.ai_score) if order == "desc" else Repo.ai_score
-        query = db.query(Repo)
+
+        # 子查询：每个 repo 最新一天的 stars_today（只取今天有数据的）
+        latest_date = db.query(func.max(DailyStat.stat_date)).scalar()
+        latest_stars = (
+            db.query(DailyStat.repo_id, DailyStat.stars_today, DailyStat.rank_position)
+            .filter(DailyStat.stat_date == latest_date)
+            .subquery()
+        )
+
+        query = (
+            db.query(Repo, latest_stars.c.stars_today, latest_stars.c.rank_position)
+            .outerjoin(latest_stars, Repo.id == latest_stars.c.repo_id)
+        )
         if cat_id:
             query = query.filter(Repo.category_id == cat_id)
         query = query.order_by(sort_col)
         total = query.count()
-        items = query.offset((page - 1) * page_size).limit(page_size).all()
+        rows = query.offset((page - 1) * page_size).limit(page_size).all()
         return {
             "date": None,
             "total": total,
             "page": page,
             "page_size": page_size,
-            "items": [_format_repo(r, None) for r in items],
+            "items": [
+                _format_repo(repo, type('S', (), {
+                    'stars_today': (st or 0),
+                    'rank_position': (rk or 0),
+                }))
+                for repo, st, rk in rows
+            ],
         }
 
     # ── 日期模式（今日热度）─────────────────────────────────────────
@@ -231,6 +249,9 @@ def get_repo(full_name: str, db: Session = Depends(get_db)):
 
     cat = db.query(Category).filter(Category.id == repo.category_id).first()
 
+    # 最新一天的 stats
+    latest_stat = stats[-1] if stats else None
+
     return {
         "id": repo.id,
         "full_name": repo.full_name,
@@ -244,7 +265,9 @@ def get_repo(full_name: str, db: Session = Depends(get_db)):
         "html_url": repo.html_url,
         "homepage": repo.homepage,
         "stars_total": repo.stars_total,
+        "stars_today": latest_stat.stars_today if latest_stat else 0,
         "forks_total": repo.forks_total,
+        "rank": latest_stat.rank_position if latest_stat else 0,
         "topics": repo.topics or [],
         "category": {"name": cat.name, "slug": cat.slug, "icon": cat.icon} if cat else None,
         "sub_categories": repo.sub_categories or [],
