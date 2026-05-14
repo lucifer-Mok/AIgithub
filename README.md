@@ -4,8 +4,11 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
-![Vue3](https://img.shields.io/badge/Vue-3.x-brightgreen)
+![Vue3](https://img.shields.io/badge/Vue-3.5-brightgreen)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+![Vite](https://img.shields.io/badge/Vite-8-purple)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4)
 
 ---
 
@@ -143,6 +146,51 @@ AIgithub/
 
 ---
 
+## 🛠️ 技术栈
+
+### 后端
+
+| 技术 | 版本 | 用途 |
+|------|------|------|
+| Python | 3.12+ | 运行环境 |
+| FastAPI | 0.111 | Web 框架 |
+| Uvicorn | 0.29 | ASGI 服务器 |
+| SQLAlchemy | 2.0 | ORM |
+| PyMySQL | 1.1 | MySQL 驱动 |
+| APScheduler | 3.10 | 定时任务 |
+| httpx | 0.27 | GitHub API 调用 |
+| BeautifulSoup4 | 4.12 | Trending 页面解析 |
+| Pydantic | 2.7 | 数据校验/配置 |
+| deep-translator | 1.11 | Google 免费翻译 |
+
+### 前端
+
+| 技术 | 版本 | 用途 |
+|------|------|------|
+| Vue | 3.5 | 前端框架 |
+| Vite | 8 | 构建工具 |
+| TypeScript | 6.0 | 类型安全 |
+| Tailwind CSS | 4 | CSS 框架 |
+| Pinia | 3 | 状态管理 |
+| Vue Router | 5 | 路由 |
+| Axios | 1.16 | HTTP 客户端 |
+| Lucide Vue | 1.0 | 图标 |
+| VueUse | 14 | Composition 工具 |
+
+### AI / 翻译
+
+| 服务 | 说明 |
+|------|------|
+| DeepSeek API | 高质量中文翻译（可选，需 Key） |
+| Google Translate | 免费翻译降级（无需 Key） |
+
+### 数据库
+
+| 技术 | 版本 |
+|------|------|
+| MySQL | 8.0+ |
+
+---
 ## 🚀 快速开始
 
 ### 环境要求
