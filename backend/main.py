@@ -13,6 +13,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import settings
+from database import engine
+from models import UserFavorite
 from scheduler import start_scheduler, stop_scheduler, get_scheduler_status
 from api.routes import router
 from api.config_routes import router as config_router
@@ -28,6 +30,7 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     # 启动时
     logger.info("Starting AI GitHub Tracker...")
+    UserFavorite.__table__.create(bind=engine, checkfirst=True)
     if settings.github_token:
         logger.info("GitHub Token: configured ✓")
     else:

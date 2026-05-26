@@ -24,10 +24,14 @@
         <span v-if="repo.has_chinese_readme" class="cn-badge" title="有中文文档">中</span>
       </div>
       <div class="card-actions">
-        <a :href="repo.html_url" target="_blank" rel="noopener"
-           class="github-link" @click.stop>
-          <GithubIcon :size="14" />
-        </a>
+        <span v-if="repo.rank > 0 && repo.rank <= 10" class="rank-badge mono">
+          #{{ repo.rank }}
+        </span>
+        <button class="favorite-btn" :class="{ active: repo.is_favorite, loading: favoriteLoading }"
+          :title="repo.is_favorite ? '取消收藏' : '收藏'"
+          @click.stop.prevent="toggleFavorite">
+          <StarIcon :size="14" :fill="repo.is_favorite ? 'currentColor' : 'none'" />
+        </button>
       </div>
     </div>
 
@@ -72,11 +76,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 排名标记 -->
-    <div v-if="repo.rank > 0 && repo.rank <= 10" class="rank-badge mono">
-      #{{ repo.rank }}
-    </div>
   </article>
 </template>
 
@@ -87,13 +86,6 @@ import type { Repo } from '@/api'
 import { api } from '@/api'
 import { useAppStore } from '@/stores/app'
 
-const GithubIcon = {
-  props: ['size'],
-  template: `<svg :width="size||14" :height="size||14" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-  </svg>`
-}
-
 const CAT_NAMES: Record<string, string> = {
   llm: '大语言模型', rag: 'RAG检索', agent: 'AI Agent',
   mcp: 'MCP协议', vision: '图像视觉', audio: '语音音频',
@@ -103,10 +95,11 @@ const CAT_NAMES: Record<string, string> = {
 }
 
 const props = defineProps<{ repo: Repo }>()
-const emit = defineEmits<{ click: [repo: Repo] }>()
+const emit = defineEmits<{ click: [repo: Repo], favoriteChange: [repo: Repo, isFavorite: boolean] }>()
 const store = useAppStore()
 const translating = ref(false)
 const isTranslateAction = ref(false)
+const favoriteLoading = ref(false)
 
 // 从 store 读取，全局只查一次
 const hasDeepSeek = computed(() => store.hasDeepSeek)
@@ -142,6 +135,25 @@ async function doTranslate(engine: 'auto' | 'deepseek' | 'google') {
   } finally {
     translating.value = false
     setTimeout(() => { isTranslateAction.value = false }, 100)
+  }
+}
+
+async function toggleFavorite() {
+  if (favoriteLoading.value) return
+  favoriteLoading.value = true
+  const nextValue = !props.repo.is_favorite
+  try {
+    if (nextValue) {
+      await api.favoriteRepo(props.repo.full_name)
+    } else {
+      await api.unfavoriteRepo(props.repo.full_name)
+    }
+    props.repo.is_favorite = nextValue
+    emit('favoriteChange', props.repo, nextValue)
+  } catch (e) {
+    console.error('Favorite update failed:', e)
+  } finally {
+    favoriteLoading.value = false
   }
 }
 
@@ -206,6 +218,7 @@ function getScoreClass(score: number) {
   background: linear-gradient(135deg, var(--accent-glow) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.2s;
+  pointer-events: none;
 }
 .repo-card:hover {
   border-color: rgba(79, 70, 229, 0.35);
@@ -215,11 +228,14 @@ function getScoreClass(score: number) {
 .repo-card:hover::before { opacity: 1; }
 
 .card-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
   margin-bottom: 8px;
+  padding-right: 62px;
 }
 .repo-meta {
   display: flex;
@@ -257,16 +273,42 @@ function getScoreClass(score: number) {
   line-height: 1.4;
   opacity: 0.8;
 }
-.github-link {
+.favorite-btn {
   color: var(--text-muted);
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
   padding: 4px;
   border-radius: 4px;
   transition: all 0.15s;
   flex-shrink: 0;
 }
-.github-link:hover { color: var(--text-primary); background: var(--bg-hover); }
+.card-actions {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+}
+.favorite-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.favorite-btn:hover,
+.favorite-btn.active {
+  color: var(--amber);
+  background: rgba(245,158,11,0.1);
+}
+.favorite-btn.loading {
+  opacity: 0.55;
+  cursor: wait;
+}
 
 .repo-desc {
   font-size: 12px;
@@ -283,7 +325,7 @@ function getScoreClass(score: number) {
 .translate-overlay {
   position: absolute;
   top: 8px;
-  right: 36px;  /* 避开右上角的 GitHub 链接按钮 */
+  right: 96px;
   display: flex;
   align-items: center;
   gap: 3px;
@@ -386,14 +428,16 @@ function getScoreClass(score: number) {
 .stat-item.hot { color: var(--amber); font-weight: 600; }
 
 .rank-badge {
-  position: absolute;
-  top: 10px;
-  right: 36px;
   font-size: 10px;
   color: var(--accent);
   background: var(--accent-glow);
   border: 1px solid rgba(99,102,241,0.3);
   border-radius: 3px;
-  padding: 1px 5px;
+  padding: 0 6px;
+  height: 20px;
+  line-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

@@ -20,6 +20,12 @@
             <SearchIcon :size="13" :class="{ 'spin': searching }" />
             <input v-model="searchQuery" placeholder="搜索全部项目..." class="search-input" />
           </div>
+          <button class="favorite-filter-btn" :class="{ active: store.favoritesOnly }"
+            :title="store.favoritesOnly ? '显示全部项目' : '只看收藏'"
+            @click="toggleFavoriteFilter">
+            <StarIcon :size="13" :fill="store.favoritesOnly ? 'currentColor' : 'none'" />
+            收藏
+          </button>
           <!-- 语言切换 -->
           <button class="lang-btn" @click="store.lang = store.lang === 'zh' ? 'en' : 'zh'"
             :title="store.lang === 'zh' ? '切换为英文' : '切换为中文'">
@@ -79,6 +85,7 @@
           :repo="repo"
           :style="{ animationDelay: `${Math.min(i, 20) * 30}ms` }"
           @click="openDetail"
+          @favorite-change="onFavoriteChange"
         />
       </div>
 
@@ -103,7 +110,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useIntersectionObserver } from '@vueuse/core'
-import { SearchIcon, RefreshCwIcon } from 'lucide-vue-next'
+import { SearchIcon, RefreshCwIcon, StarIcon } from 'lucide-vue-next'
 import { useAppStore } from '@/stores/app'
 import { api, type Repo } from '@/api'
 import AppSidebar from '@/components/AppSidebar.vue'
@@ -130,11 +137,16 @@ const selectedRepo = ref('')
 const loadMoreRef = ref<HTMLElement>()
 
 // 搜索时用后端全量搜索，否则用 store 列表
-const filteredRepos = computed(() =>
-  searchQuery.value.trim() ? searchResults.value : store.repos
-)
+const filteredRepos = computed(() => {
+  const items = searchQuery.value.trim() ? searchResults.value : store.repos
+  return store.favoritesOnly && searchQuery.value.trim()
+    ? items.filter(repo => repo.is_favorite)
+    : items
+})
 const displayTotal = computed(() =>
-  searchQuery.value.trim() ? searchTotal.value : store.total
+  searchQuery.value.trim() && store.favoritesOnly ? filteredRepos.value.length
+    : searchQuery.value.trim() ? searchTotal.value
+      : store.total
 )
 
 watch(searchQuery, () => {
@@ -178,6 +190,16 @@ async function triggerCrawl() {
   } finally {
     setTimeout(() => { crawling.value = false }, 5000)
   }
+}
+
+async function toggleFavoriteFilter() {
+  await store.setFavoritesOnly(!store.favoritesOnly)
+}
+
+function onFavoriteChange(repo: Repo, isFavorite: boolean) {
+  store.updateFavorite(repo.full_name, isFavorite)
+  const match = searchResults.value.find(item => item.full_name === repo.full_name)
+  if (match) match.is_favorite = isFavorite
 }
 
 function onNavigate(view: string) {
@@ -258,7 +280,8 @@ onMounted(async () => {
 }
 .search-input::placeholder { color: var(--text-muted); }
 
-.lang-btn {
+.lang-btn,
+.favorite-filter-btn {
   font-size: 12px;
   font-weight: 600;
   padding: 6px 10px;
@@ -272,6 +295,12 @@ onMounted(async () => {
   align-items: center;
   gap: 5px;
   white-space: nowrap;
+}
+.favorite-filter-btn.active,
+.favorite-filter-btn:hover {
+  border-color: rgba(245,158,11,0.45);
+  color: var(--amber);
+  background: rgba(245,158,11,0.1);
 }
 .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
 .lang-flag { font-size: 13px; }

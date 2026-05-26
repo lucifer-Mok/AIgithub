@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func, desc
 
 from database import get_db
-from models import Category, Repo, DailyStat, CrawlLog
+from models import Category, Repo, DailyStat, CrawlLog, UserFavorite
 from crawler.runner import run_daily_crawl
 
 router = APIRouter()
@@ -44,6 +44,7 @@ def list_repos(
     order: str = Query("desc", description="asc | desc"),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),
+    favorites_only: bool = Query(False),
     db: Session = Depends(get_db),
 ):
     """
@@ -60,7 +61,7 @@ def list_repos(
         cat_id = cat.id
 
     # ── 全量模式（总星数 / AI相关度）────────────────────────────────
-    if sort in ("stars_total", "ai_score"):
+    if sort in ("stars_total", "ai_score") or favorites_only:
         if sort == "stars_total":
             sort_col = desc(Repo.stars_total) if order == "desc" else Repo.stars_total
         else:
@@ -73,11 +74,16 @@ def list_repos(
             .filter(DailyStat.stat_date == latest_date)
             .subquery()
         )
+        if sort == "stars_today":
+            latest_today = func.coalesce(latest_stars.c.stars_today, 0)
+            sort_col = desc(latest_today) if order == "desc" else latest_today
 
         query = (
             db.query(Repo, latest_stars.c.stars_today, latest_stars.c.rank_position)
             .outerjoin(latest_stars, Repo.id == latest_stars.c.repo_id)
         )
+        if favorites_only:
+            query = query.join(UserFavorite, UserFavorite.repo_id == Repo.id)
         if cat_id:
             query = query.filter(Repo.category_id == cat_id)
         query = query.order_by(sort_col)
@@ -114,6 +120,8 @@ def list_repos(
         .filter(DailyStat.stat_date == stat_date)
         .filter(DailyStat.stars_today > 0)  # 只显示真正上了 Trending 的
     )
+    if favorites_only:
+        query = query.join(UserFavorite, UserFavorite.repo_id == Repo.id)
     if cat_id:
         query = query.filter(Repo.category_id == cat_id)
     query = query.order_by(desc(DailyStat.stars_today) if order == "desc" else DailyStat.stars_today)
@@ -228,6 +236,34 @@ async def translate_repo_on_demand(
     raise HTTPException(400, "No translation engine available. Configure DEEPSEEK_API_KEY or use engine=google")
 
 
+@router.post("/repos/{full_name:path}/favorite")
+def favorite_repo(full_name: str, db: Session = Depends(get_db)):
+    """收藏 repo"""
+    repo = db.query(Repo).filter(Repo.full_name == full_name).first()
+    if not repo:
+        raise HTTPException(404, "Repo not found")
+
+    exists = db.query(UserFavorite).filter(UserFavorite.repo_id == repo.id).first()
+    if not exists:
+        db.add(UserFavorite(repo_id=repo.id))
+        db.commit()
+    return {"success": True, "is_favorite": True}
+
+
+@router.delete("/repos/{full_name:path}/favorite")
+def unfavorite_repo(full_name: str, db: Session = Depends(get_db)):
+    """取消收藏 repo"""
+    repo = db.query(Repo).filter(Repo.full_name == full_name).first()
+    if not repo:
+        raise HTTPException(404, "Repo not found")
+
+    favorite = db.query(UserFavorite).filter(UserFavorite.repo_id == repo.id).first()
+    if favorite:
+        db.delete(favorite)
+        db.commit()
+    return {"success": True, "is_favorite": False}
+
+
 @router.get("/repos/{full_name:path}")
 def get_repo(full_name: str, db: Session = Depends(get_db)):
     """获取单个 repo 详情及近 30 天趋势"""
@@ -273,6 +309,7 @@ def get_repo(full_name: str, db: Session = Depends(get_db)):
         "sub_categories": repo.sub_categories or [],
         "ai_score": repo.ai_score,
         "has_chinese_readme": bool(repo.has_chinese_readme),
+        "is_favorite": repo.favorite is not None,
         "trend": [
             {
                 "date": s.stat_date.isoformat(),
@@ -290,6 +327,7 @@ def get_repo(full_name: str, db: Session = Depends(get_db)):
 @router.get("/stats/overview")
 def stats_overview(
     date_str: Optional[str] = Query(None, alias="date"),
+    favorites_only: bool = Query(False),
     sort: str = Query("stars_today", description="当前排序模式，影响分类数量统计"),
     db: Session = Depends(get_db),
 ):
@@ -318,6 +356,35 @@ def stats_overview(
             stat_date = latest.stat_date
 
     # 各分类数量：今日热度模式用当天 daily_stats，其他模式用全库
+    if favorites_only:
+        category_counts = (
+            db.query(Category.name, Category.slug, Category.icon, func.count(UserFavorite.id))
+            .outerjoin(Repo, Repo.category_id == Category.id)
+            .outerjoin(UserFavorite, UserFavorite.repo_id == Repo.id)
+            .group_by(Category.id)
+            .order_by(Category.sort_order)
+            .all()
+        )
+        total_favorites = db.query(func.count(UserFavorite.id)).scalar() or 0
+        total_stars_today = (
+            db.query(func.sum(DailyStat.stars_today))
+            .join(UserFavorite, UserFavorite.repo_id == DailyStat.repo_id)
+            .filter(DailyStat.stat_date == stat_date)
+            .scalar()
+            or 0
+        )
+        return {
+            "date": stat_date.isoformat(),
+            "total_repos_today": total_favorites,
+            "total_repos_all": total_favorites,
+            "trending_today": total_favorites,
+            "total_stars_today": total_stars_today,
+            "categories": [
+                {"name": name, "slug": slug, "icon": icon, "count": count}
+                for name, slug, icon, count in category_counts
+            ],
+        }
+
     if sort == "stars_today":
         category_counts = (
             db.query(Category.name, Category.slug, Category.icon, func.count(DailyStat.id))
@@ -529,4 +596,5 @@ def _format_repo(repo: Repo, stat) -> dict:
         "ai_score": repo.ai_score,
         "rank": stat.rank_position if stat else 0,
         "has_chinese_readme": bool(repo.has_chinese_readme),
+        "is_favorite": repo.favorite is not None,
     }

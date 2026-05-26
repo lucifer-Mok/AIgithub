@@ -13,6 +13,7 @@ export const useAppStore = defineStore('app', () => {
   const selectedDate = ref<string>('')
   const sortBy = ref<string>('stars_today')
   const order = ref<'asc' | 'desc'>('desc')
+  const favoritesOnly = ref(false)
   const page = ref(1)
   const pageSize = ref(20)
   const lang = ref<'zh' | 'en'>('zh')
@@ -36,7 +37,7 @@ export const useAppStore = defineStore('app', () => {
 
   // 加载概览，后端会自动回退到最近有数据的日期
   async function loadOverview(date?: string) {
-    const res = await api.getOverview(date, sortBy.value)
+    const res = await api.getOverview(date, sortBy.value, favoritesOnly.value || undefined)
     overview.value = res.data
     // 同步前端选中的日期
     if (!date && res.data.date) {
@@ -56,6 +57,7 @@ export const useAppStore = defineStore('app', () => {
         order: order.value,
         page: page.value,
         page_size: pageSize.value,
+        favorites_only: favoritesOnly.value || undefined,
       })
       if (reset) {
         repos.value = res.data.items
@@ -94,11 +96,27 @@ export const useAppStore = defineStore('app', () => {
     await Promise.all([loadRepos(true), loadOverview()])
   }
 
+  async function setFavoritesOnly(value: boolean) {
+    favoritesOnly.value = value
+    await Promise.all([loadRepos(true), loadOverview()])
+  }
+
+  function updateFavorite(fullName: string, isFavorite: boolean) {
+    repos.value = repos.value.map(repo =>
+      repo.full_name === fullName ? { ...repo, is_favorite: isFavorite } : repo
+    )
+    if (favoritesOnly.value && !isFavorite) {
+      repos.value = repos.value.filter(repo => repo.full_name !== fullName)
+      total.value = Math.max(0, total.value - 1)
+    }
+    loadOverview()
+  }
+
   return {
     categories, overview, repos, total, loading,
-    selectedCategory, selectedDate, sortBy, order, page, pageSize, lang, hasDeepSeek,
+    selectedCategory, selectedDate, sortBy, order, favoritesOnly, page, pageSize, lang, hasDeepSeek,
     currentCategory,
     loadCategories, loadOverview, loadRepos, loadMore,
-    setCategory, setSort,
+    setCategory, setSort, setFavoritesOnly, updateFavorite,
   }
 })

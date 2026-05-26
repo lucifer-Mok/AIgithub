@@ -54,6 +54,7 @@ class Repo(Base):
 
     category = relationship("Category", back_populates="repos")
     daily_stats = relationship("DailyStat", back_populates="repo")
+    favorite = relationship("UserFavorite", back_populates="repo", uselist=False, cascade="all, delete-orphan")
 
 
 class DailyStat(Base):
@@ -101,3 +102,14 @@ class CrawlLog(Base):
     error_msg = Column(Text)
     duration_seconds = Column(Integer)
     created_at = Column(DateTime, server_default=func.now())
+
+
+class UserFavorite(Base):
+    __tablename__ = "user_favorites"
+    __table_args__ = {"schema": "ai_github"}
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    repo_id = Column(Integer, ForeignKey("ai_github.repos.id"), nullable=False, unique=True)
+    created_at = Column(DateTime, server_default=func.now())
+
+    repo = relationship("Repo", back_populates="favorite")

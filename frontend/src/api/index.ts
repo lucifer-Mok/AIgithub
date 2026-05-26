@@ -33,6 +33,7 @@ export interface Repo {
   ai_score: number
   rank: number
   has_chinese_readme: boolean
+  is_favorite: boolean
 }
 
 export interface RepoDetail extends Repo {
@@ -63,8 +64,8 @@ export const api = {
   getCategories: () => http.get<Category[]>('/categories'),
 
   // 概览
-  getOverview: (date?: string, sort?: string) =>
-    http.get<Overview>('/stats/overview', { params: { date, sort } }),
+  getOverview: (date?: string, sort?: string, favorites_only?: boolean) =>
+    http.get<Overview>('/stats/overview', { params: { date, sort, favorites_only } }),
 
   // 历史趋势
   getHistory: (days = 30) =>
@@ -78,6 +79,7 @@ export const api = {
     order?: string
     page?: number
     page_size?: number
+    favorites_only?: boolean
   }) => http.get<RepoListResponse>('/repos', { params }),
 
   // repo 详情
@@ -98,6 +100,10 @@ export const api = {
   // 按需翻译
   translateRepo: (fullName: string, engine: 'auto' | 'deepseek' | 'google' = 'auto') =>
     http.post(`/repos/${fullName}/translate`, null, { params: { engine } }),
+  favoriteRepo: (fullName: string) =>
+    http.post(`/repos/${fullName}/favorite`),
+  unfavoriteRepo: (fullName: string) =>
+    http.delete(`/repos/${fullName}/favorite`),
 
   // 系统配置
   getConfig: () => http.get('/config'),

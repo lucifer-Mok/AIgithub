@@ -80,6 +80,7 @@
 #### 📊 项目卡片
 - **核心信息一目了然**：项目名称、描述、语言、AI 相关度评分、今日新增 Star、总 Star、Fork 数
 - **排名标记**：Trending Top 10 项目显示排名徽章
+- **项目收藏**：卡片右上角星标可收藏/取消收藏，收藏状态持久保存，排名徽章与收藏按钮统一对齐展示
 
 #### 🔍 详情抽屉
 - **点击卡片展开详情**：完整项目介绍、近期 30 天趋势图、分类标签
@@ -91,6 +92,8 @@
 - **升降序切换**：点击排序按钮切换升序/降序
 - **分类筛选**：左侧导航点击分类，数量实时联动
 - **全量搜索**：后端搜索，覆盖名称、描述、中文摘要
+- **只看收藏**：顶部收藏筛选一键查看已收藏项目，排序只改变收藏列表顺序，不改变收藏集合
+- **收藏统计联动**：只看收藏时，左侧分类数量同步切换为收藏范围内的统计
 - **无限滚动**：自动加载更多，滚动到底部无缝追加
 - **日期穿越**：选择历史日期，查看当日 Trending 情况
 
@@ -127,6 +130,7 @@ AIgithub/
 │   ├── config.py            # 配置管理
 │   ├── database.py          # SQLAlchemy 引擎与会话工厂
 │   ├── models.py            # SQLAlchemy 数据模型
+│   ├── add_favorites_table.sql # 收藏表迁移脚本
 │   ├── init_data.sql        # 初始化数据（分类 + 追踪规则）
 │   ├── scheduler.py         # APScheduler 定时任务
 │   └── main.py              # FastAPI 应用入口
@@ -247,7 +251,7 @@ DEEPSEEK_API_KEY=sk-xxxx
 CREATE DATABASE ai_github DEFAULT CHARACTER SET utf8mb4;
 ```
 
-然后启动后端，表结构会自动创建（通过 SQLAlchemy）。
+然后启动后端，表结构会自动创建（通过 SQLAlchemy）。收藏表 `user_favorites` 会在后端启动时自动检查并创建；如果需要手动迁移，也可以执行 `backend/add_favorites_table.sql`。
 
 表创建后，执行 `init_data.sql` 植入 14 个分类和示例追踪规则：
 
@@ -287,11 +291,13 @@ curl -X POST http://localhost:8000/api/crawl/trigger
 
 | 接口 | 说明 |
 |------|------|
-| `GET /api/repos` | 获取 repo 列表（支持分类、日期、排序、分页） |
+| `GET /api/repos` | 获取 repo 列表（支持分类、日期、排序、分页、只看收藏；收藏模式下排序不改变集合） |
 | `GET /api/repos/search` | 全量搜索（名称、描述、中文摘要） |
 | `GET /api/repos/{full_name}` | 获取 repo 详情及近 30 天趋势 |
 | `POST /api/repos/{full_name}/translate` | 按需翻译单个 repo |
-| `GET /api/stats/overview` | 首页概览统计 |
+| `POST /api/repos/{full_name}/favorite` | 收藏 repo |
+| `DELETE /api/repos/{full_name}/favorite` | 取消收藏 repo |
+| `GET /api/stats/overview` | 首页概览统计（支持收藏范围统计） |
 | `GET /api/stats/history` | 近 N 天每日新增 repo 趋势 |
 | `GET /api/categories` | 获取所有分类 |
 | `POST /api/crawl/trigger` | 手动触发爬取（后台异步） |
